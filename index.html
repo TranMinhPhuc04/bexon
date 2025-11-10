@@ -338,6 +338,70 @@
         class="partners-section section-gap-x"
         aria-labelledby="partners-title"
       >
+        <!-- Empowering Businesses with Expertise. -->
+        <div id="choose" class="expertise-section section-spacing">
+          <div class="container">
+            <div class="row">
+              <div class="col-12">
+                <div class="section-heading text-center">
+                  <span class="heading-subtitle wow fadeInUp" data-wow-delay=".3s">
+                    <i class="subtitle-icon"></i>Choose the Best
+                  </span>
+                  <h2 class="heading-title title-animated">
+                    <div>Empowering Business</div>
+                    <div>with <span class="title-highlight">Expertise.</span></div>
+                  </h2>
+                </div>
+              </div>
+            </div>
+            <div class="row row-spacing rightSwipeWrap">
+              <div class="col-lg-4">
+                <div class="expertise-card right-swipe">
+                  <div class="card-content">
+                    <div class="card-icon">
+                      <i class="icon-innovative icon-element"></i>
+                    </div>
+                    <h4 class="card-title">Innovative Solutions</h4>
+                    <p class="card-description">
+                      We stay ahead of the curve, leveraging cutting-edge
+                      technologies and strategies to keep you competitive in a
+                      marketplace.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-4">
+                <div class="expertise-card right-swipe">
+                  <div class="card-content">
+                    <div class="card-icon icon-trophy">
+                      <i class="icon-award icon-element"></i>
+                    </div>
+                    <h4 class="card-title">Award-Winning Expertise</h4>
+                    <p class="card-description">
+                      Recognized by industry leaders, our award-winning team has
+                      a proven record of delivering excellence across projects.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-4">
+                <div class="expertise-card right-swipe">
+                  <div class="card-content">
+                    <div class="card-icon icon-support">
+                      <i class="icon-support icon-element"></i>
+                    </div>
+                    <h4 class="card-title">Dedicated Support</h4>
+                    <p class="card-description">
+                      Our team is always available to address your concerns,
+                      providing quick and effective solution to keep your
+                      business.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
         <div class="partners-container">
           <div class="partners-wrapper">
             <!-- Title Card - Absolute Center -->
@@ -388,7 +452,6 @@
                     <img src="./asset/brand-6.webp" alt="Brand 6" />
                   </div>
                 </div>
-
               </div>
               <span
                 class="swiper-notification"
@@ -429,28 +492,27 @@
     <!-- Swiper Carousel Init -->
     <script>
       document.addEventListener("DOMContentLoaded", function () {
-         const swiper = new Swiper(".partners-carousel", {
-           slidesPerView: "auto",
-           spaceBetween: 40,
-           loop: false,
-           freeMode: {
-             enabled: true,
-             momentum: false,
-           },
-           speed: 6000,
-           autoplay: {
-             delay: 0,
-             disableOnInteraction: false,
-           },
-           allowTouchMove: false, // Tắt touch/swipe
-           grabCursor: false, // Tắt grab cursor
-           simulateTouch: false, // Tắt simulate touch
+        const swiper = new Swiper(".partners-carousel", {
+          slidesPerView: "auto",
+          spaceBetween: 60,
+          loop: true,
+          freeMode: {
+            enabled: true,
+            momentum: false,
+          },
+          speed: 3000,
+          autoplay: {
+            delay: 0,
+            disableOnInteraction: false,
+          },
+          allowTouchMove: false,
+          grabCursor: false,
+          simulateTouch: false,
           on: {
             setTranslate(swiper, translate) {
               const maxTranslate = swiper.maxTranslate();
               const minTranslate = swiper.minTranslate();
-
-              // Khi đạt điểm cuối → reset ngay lập tức (không giật)
+              // Reset về đầu khi đến cuối để loop vô hạn
               if (translate <= maxTranslate + 50) {
                 swiper.setTranslate(minTranslate + 50);
               }
@@ -458,20 +520,13 @@
           },
         });
 
-        // Đảm bảo autoplay LUÔN chạy - kiểm tra mỗi 50ms
+        // Đảm bảo autoplay luôn chạy
         const keepRunning = setInterval(function () {
-          if (swiper && swiper.autoplay) {
-            // Nếu autoplay không chạy và không bị pause, start lại
-            if (
-              !swiper.autoplay.running &&
-              !swiper.autoplay.paused
-            ) {
-              swiper.autoplay.start();
-            }
+          if (swiper && swiper.autoplay && !swiper.autoplay.running) {
+            swiper.autoplay.start();
           }
-        }, 50);
+        }, 100);
 
-        // Cleanup
         window.addEventListener("beforeunload", function () {
           clearInterval(keepRunning);
         });

@@ -1,15 +1,224 @@
-.partners-section {
-  padding-top: 80px;
-  padding-bottom: 80px;
-  position: relative;
-  background-color: #f5f5f5;
+$primary-color: #1e8a8a;
+$dark-color: #1a1a1a;
+$white-color: #ffffff;
+$border-color: rgba(255, 255, 255, 0.2);
+$background-light: #f5f5f5;
+$hover-shadow: rgba(0, 0, 0, 0.12);
+$card-shadow: rgba(0, 0, 0, 0.08);
+
+.expertise-section {
   overflow: hidden;
 }
 
-.partners-container {
+.section-heading,
+.sec-heading {
+  margin-left: auto;
+  margin-right: auto;
   width: 100%;
-  padding: 0;
-  margin: 0;
+  margin-bottom: 52px;
+
+  .heading-subtitle,
+  .sub-title {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    color: $dark-color;
+    font-size: 14px;
+    line-height: 1;
+    letter-spacing: 1.4px;
+    text-transform: uppercase;
+    font-weight: 700;
+    border: 1px dashed $border-color;
+    padding: 2px 10px;
+    margin-bottom: 20px;
+    border-radius: 4px;
+
+    .subtitle-icon,
+    i {
+      font-family: "bexon-icons" !important;
+      font-style: normal;
+      font-weight: normal;
+      font-variant: normal;
+      text-transform: none;
+      line-height: 1;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      display: inline-block;
+      width: 18px;
+      height: 18px;
+      background-color: $primary-color;
+      -webkit-mask-image: url('../asset/box-alt (1).png');
+      -webkit-mask-size: contain;
+      -webkit-mask-repeat: no-repeat;
+      -webkit-mask-position: center;
+      mask-image: url('../asset/box-alt (1).png');
+      mask-size: contain;
+      mask-repeat: no-repeat;
+      mask-position: center;
+      font-size: 0;
+      vertical-align: middle;
+    }
+  }
+
+  .heading-title,
+  .sec-title {
+    display: block;
+    text-align: center;
+    position: relative;
+    margin-bottom: 0;
+
+    &.title-animated,
+    &.title-anim {
+      > div {
+        display: block;
+        text-align: center;
+        position: relative;
+        overflow: hidden;
+      }
+    }
+
+    .title-highlight,
+    span {
+      color: $primary-color;
+    }
+  }
+}
+
+a,
+.btn,
+button,
+span,
+p,
+input,
+select,
+textarea,
+li,
+svg path,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  -webkit-transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-in-out 0s;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Mona Sans", sans-serif;
+  color: $dark-color;
+  margin-top: 0;
+  font-weight: 500;
+  line-height: 1.2;
+  letter-spacing: -0.03em;
+}
+
+h2 {
+  font-size: 48px;
+  line-height: 1.125;
+}
+
+.text-center {
+  text-align: center !important;
+}
+
+
+.row-spacing,
+.row-gap-4 {
+  margin-bottom: -1.5rem;
+  
+  > * {
+    margin-bottom: 1.5rem;
+  }
+}
+
+.row > * {
+  flex-shrink: 0;
+  width: 100%;
+  max-width: 100%;
+  padding-right: calc(var(--bs-gutter-x) * 0.5);
+  padding-left: calc(var(--bs-gutter-x) * 0.5);
+  margin-top: var(--bs-gutter-y);
+}
+
+.col-lg-4 {
+  flex: 0 0 auto;
+  width: 33%;
+}
+
+.expertise-card,
+.choose-box {
+  background-color: $white-color;
+  border-radius: 12px;
+  padding: 2rem;
+  height: 100%;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px $card-shadow;
+  border: 1px solid $border-color;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $primary-color;
+    box-shadow: 0 8px 24px $hover-shadow;
+    -webkit-transform: translateY(-4px);
+    transform: translateY(-4px);
+
+    .card-title,
+    .card-description,
+    .title,
+    .desc {
+      color: $white-color;
+    }
+
+    .card-icon,
+    .choose-icon {
+      background-color: $white-color;
+    }
+  }
+
+  .card-content,
+  .choose-content {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+
+  .card-icon,
+  .choose-icon {
+    width: 88px;
+    height: 88px;
+    background-color: $primary-color;
+    -webkit-mask-image: url('../asset/light-bulb.png');
+    -webkit-mask-size: contain;
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-position: center;
+    mask-image: url('../asset/light-bulb.png');
+    mask-size: contain;
+    mask-repeat: no-repeat;
+    mask-position: center;
+    margin-bottom: 1.5rem;
+
+    .icon-element,
+    i {
+      display: none;
+    }
+
+    // Icon variants - sử dụng class thay vì :has() để tương thích CSS3
+    &.icon-trophy,
+    &:has(.tji-award),
+    &:has(.icon-award) {
+      -webkit-mask-image: url('../asset/trophy.png');
+      mask-image: url('../asset/trophy.png');
+    }
+
+    &.icon-support,
+    &:has(.tji-support),
+    &:has(.icon-support) {
+      -webkit-mask-image: url('../asset/support.png');
+      mask-image: url('../asset/support.png');
+    }
+  }
 }
 
 .partners-wrapper {
@@ -24,19 +233,20 @@
   width: 320px;
   height: 320px;
   border-radius: 50%;
-  border: 1px dashed #1e8a8a;
+  border: 1px dashed $primary-color;
   display: inline-flex;
   align-items: center;
   justify-content: center;
   position: absolute;
   left: 50%;
   top: 50%;
+  -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   text-align: center;
-  z-index: 2;
+  z-index: 10;
   background-color: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
   pointer-events: none;
 }
 
@@ -48,13 +258,13 @@
   margin: 0;
   font-size: 18px;
   line-height: 1.4;
-  color: #1a1a1a;
+  color: $dark-color;
   font-family: "Mona Sans", sans-serif;
 }
 
 .partners-numbers {
-  color: #ffffff;
-  background-color: #1e8a8a;
+  color: $white-color;
+  background-color: $primary-color;
   line-height: 1.2;
   border-radius: 50px;
   padding: 0 5px;
@@ -63,12 +273,15 @@
 }
 
 .partners-brand {
-  color: #1e8a8a;
+  color: $primary-color;
   position: relative;
   display: inline-flex;
   font-weight: 600;
 }
 
+// ============================================
+// PARTNERS CAROUSEL
+// ============================================
 
 .partners-carousel {
   overflow: hidden;
@@ -77,8 +290,36 @@
   width: 100%;
   margin: 0;
   padding: 0;
-  pointer-events: none; // Tắt tương tác trên carousel
-  user-select: none; // Không cho select text
+  pointer-events: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+
+  // Gradient fade overlay - bên trái
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 200px;
+    height: 100%;
+    background: linear-gradient(to right, $background-light 0%, rgba(245, 245, 245, 0) 100%);
+    z-index: 5;
+    pointer-events: none;
+  }
+
+  // Gradient fade overlay - bên phải
+  &::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 200px;
+    height: 100%;
+    background: linear-gradient(to left, $background-light 0%, rgba(245, 245, 245, 0) 100%);
+    z-index: 5;
+    pointer-events: none;
+  }
 
   &.client-slider,
   &.client-slider-1 {
@@ -90,8 +331,9 @@
   .swiper-wrapper {
     display: flex;
     align-items: center;
+    -webkit-transition-timing-function: linear !important;
     transition-timing-function: linear !important;
-    pointer-events: none; // Tắt tương tác trên wrapper
+    pointer-events: none;
   }
 
   .swiper-slide {
@@ -99,40 +341,43 @@
     flex-shrink: 0;
     position: relative;
     height: auto;
-    pointer-events: none; 
-    cursor: default; 
+    pointer-events: none;
+    cursor: default;
   }
 }
+
+// ============================================
+// CLIENT LOGO ITEM
+// ============================================
 
 .client-item {
   width: 100%;
   height: auto;
-  pointer-events: none; 
-  cursor: default; 
+  pointer-events: none;
+  cursor: default;
 }
 
 .client-logo {
   width: 100%;
-  background: #ffffff;
+  background: $white-color;
   border-radius: 12px;
   padding: 30px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 2px 8px $card-shadow;
   height: 150px;
   display: flex;
   align-items: center;
   justify-content: center;
   box-sizing: border-box;
-  pointer-events: none; 
-  cursor: default; 
+  pointer-events: none;
+  cursor: default;
 
   img {
     max-width: 100%;
     max-height: 100%;
     object-fit: contain;
+    -webkit-filter: grayscale(100%);
     filter: grayscale(100%);
     opacity: 0.7;
-    pointer-events: none; 
+    pointer-events: none;
   }
 }
-
-
