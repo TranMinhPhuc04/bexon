@@ -419,4 +419,138 @@ header {
   font-weight: 400;
   line-height: 1.5;
   margin: 0;
+}
+
+.partners-section {
+  padding-top: 80px;
+  padding-bottom: 80px;
+  position: relative;
+  background-color: #f5f5f5;
+  overflow: hidden;
+}
+
+.partners-container {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+.partners-wrapper {
+  position: relative;
+  min-height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.partners-title-card {
+  width: 320px;
+  height: 320px;
+  border-radius: 50%;
+  border: 1px dashed #1e8a8a;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  z-index: 2;
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  pointer-events: none;
+}
+
+.partners-title {
+  max-width: 200px;
+  width: 100%;
+  letter-spacing: 0;
+  font-weight: 600;
+  margin: 0;
+  font-size: 18px;
+  line-height: 1.4;
+  color: #1a1a1a;
+  font-family: "Mona Sans", sans-serif;
+}
+
+.partners-numbers {
+  color: #ffffff;
+  background-color: #1e8a8a;
+  line-height: 1.2;
+  border-radius: 50px;
+  padding: 0 5px;
+  display: inline-flex;
+  margin: 0 2px;
+}
+
+.partners-brand {
+  color: #1e8a8a;
+  position: relative;
+  display: inline-flex;
+  font-weight: 600;
+}
+
+.partners-carousel {
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  pointer-events: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+.partners-carousel.client-slider, .partners-carousel.client-slider-1 {
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+}
+.partners-carousel .swiper-wrapper {
+  display: flex;
+  align-items: center;
+  transition-timing-function: linear !important;
+  pointer-events: none;
+}
+.partners-carousel .swiper-slide {
+  width: 340px !important;
+  flex-shrink: 0;
+  position: relative;
+  height: auto;
+  pointer-events: none;
+  cursor: default;
+}
+
+.client-item {
+  width: 100%;
+  height: auto;
+  pointer-events: none;
+  cursor: default;
+}
+
+.client-logo {
+  width: 100%;
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 30px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  pointer-events: none;
+  cursor: default;
+}
+.client-logo img {
+  max-width: 100%;
+  max-height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+  filter: grayscale(100%);
+  opacity: 0.7;
+  pointer-events: none;
 }/*# sourceMappingURL=main.css.map */
