@@ -3,37 +3,44 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Bexon</title>
+    <meta name="description" content="Bexon - Driving Excellence Through Evolution and Trust" />
+    <title>Bexon - Driving Excellence Through Evolution and Trust</title>
+    
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Mona+Sans:ital,wght@0,200..900;1,200..900&display=swap"
       rel="stylesheet"
     />
+    
+    <!-- Bootstrap CSS -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
       rel="stylesheet"
       integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
       crossorigin="anonymous"
     />
+    
+    <!-- Custom CSS -->
     <link rel="stylesheet" href="css/main.css" />
   </head>
   <body>
     <!-- Header -->
-    <header>
+    <header role="banner">
       <div class="header-container">
         <!-- Logo -->
         <div class="logo">
-          <a href="/">
-            <img src="./asset/logo.webp" alt="logo" />
+          <a href="/" aria-label="Bexon Home">
+            <img src="./asset/logo.webp" alt="Bexon Logo" width="136" height="auto" />
           </a>
         </div>
 
-        <!-- Nav -->
-        <nav class="nav-menu">
+        <!-- Navigation Menu -->
+        <nav class="nav-menu" role="navigation" aria-label="Main navigation">
           <ul>
             <li class="active">
-              <a href="#">Home</a>
+              <a href="#" aria-current="page">Home</a>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="24"
@@ -45,12 +52,13 @@
                 stroke-linecap="round"
                 stroke-linejoin="round"
                 class="lucide lucide-chevron-down-icon lucide-chevron-down"
+                aria-hidden="true"
               >
                 <path d="m6 9 6 6 6-6" />
               </svg>
             </li>
             <li>
-              <a href="#">Pages</a>
+              <a href="#pages">Pages</a>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="24"
@@ -62,12 +70,13 @@
                 stroke-linecap="round"
                 stroke-linejoin="round"
                 class="lucide lucide-chevron-down-icon lucide-chevron-down"
+                aria-hidden="true"
               >
                 <path d="m6 9 6 6 6-6" />
               </svg>
             </li>
             <li>
-              <a href="#">Services</a>
+              <a href="#services">Services</a>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="24"
@@ -79,12 +88,13 @@
                 stroke-linecap="round"
                 stroke-linejoin="round"
                 class="lucide lucide-chevron-down-icon lucide-chevron-down"
+                aria-hidden="true"
               >
                 <path d="m6 9 6 6 6-6" />
               </svg>
             </li>
             <li>
-              <a href="#">Portfolio</a>
+              <a href="#portfolio">Portfolio</a>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="24"
@@ -96,12 +106,13 @@
                 stroke-linecap="round"
                 stroke-linejoin="round"
                 class="lucide lucide-chevron-down-icon lucide-chevron-down"
+                aria-hidden="true"
               >
                 <path d="m6 9 6 6 6-6" />
               </svg>
             </li>
             <li>
-              <a href="#">Blog</a>
+              <a href="#blog">Blog</a>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="24"
@@ -113,17 +124,20 @@
                 stroke-linecap="round"
                 stroke-linejoin="round"
                 class="lucide lucide-chevron-down-icon lucide-chevron-down"
+                aria-hidden="true"
               >
                 <path d="m6 9 6 6 6-6" />
               </svg>
             </li>
-            <li><a href="#">Contact</a></li>
+            <li>
+              <a href="#contact">Contact</a>
+            </li>
           </ul>
         </nav>
 
-        <!-- Search, button, menu -->
+        <!-- Header Actions -->
         <div class="header-actions">
-          <button class="search-btn" aria-label="Search">
+          <button class="search-btn" type="button" aria-label="Search">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="24"
@@ -135,15 +149,16 @@
               stroke-linecap="round"
               stroke-linejoin="round"
               class="lucide lucide-search-icon lucide-search"
+              aria-hidden="true"
             >
               <path d="m21 21-4.34-4.34" />
               <circle cx="11" cy="11" r="8" />
             </svg>
           </button>
 
-          <a href="#contact" class="btn-lets-talk">
+          <a href="#contact" class="btn-lets-talk" aria-label="Let's Talk - Contact Us">
             Let's Talk
-            <span class="btn-icon-wrapper">
+            <span class="btn-icon-wrapper" aria-hidden="true">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="16"
@@ -162,7 +177,7 @@
             </span>
           </a>
 
-          <button class="hamburger-menu" aria-label="Menu">
+          <button class="hamburger-menu" type="button" aria-label="Toggle menu" aria-expanded="false">
             <span></span>
             <span></span>
             <span></span>
@@ -171,25 +186,137 @@
       </div>
     </header>
 
-    <!-- Section Recognized for excellence -->
-     
+    <!-- Main Content -->
+    <main role="main">
+      <!-- Hero Section: Recognized for Excellence -->
+      <section class="banner-section section-gap-x" aria-labelledby="hero-title">
+        <div class="banner-area">
+          <!-- Hero Content -->
+          <div class="banner-left-box">
+            <div class="banner-content">
+              <span class="banner-subtitle">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="lucide lucide-sparkles"
+                  aria-hidden="true"
+                >
+                  <path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z" />
+                  <path d="M5 3v4" />
+                  <path d="M19 17v4" />
+                  <path d="M3 5h4" />
+                  <path d="M17 19h4" />
+                </svg>
+                Recognized for Excellence
+              </span>
+              <h1 id="hero-title" class="banner-title">
+                Driving Excellence Through Evolution and
+                <span class="highlight">Trust.</span>
+              </h1>
+              <div class="banner-description">
+                <a href="#about" class="banner-link-btn" aria-label="Learn more about our services">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="20"
+                    height="20"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="lucide lucide-arrow-up-right"
+                    aria-hidden="true"
+                  >
+                    <path d="M7 17L17 7" />
+                    <path d="M7 7h10v10" />
+                  </svg>
+                </a>
+                <p class="banner-text">
+                  Represents growth, expansion, and modern business solution
+                  present growth, expansion.
+                </p>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Hero Image & Stats -->
+          <div class="banner-right-box">
+            <div class="banner-img">
+              <img 
+                src="./asset/hero-img.webp" 
+                alt="Bexon business solutions and services" 
+                loading="eager"
+              />
+            </div>
+            <aside class="box-area" aria-label="Customer statistics">
+              <div class="customers-box">
+                <div class="customers">
+                  <ul>
+                    <li>
+                      <img src="./asset/client-1.webp" alt="Client 1" />
+                    </li>
+                    <li>
+                      <img src="./asset/client-2.webp" alt="Client 2" />
+                    </li>
+                    <li>
+                      <img src="./asset/client-3.webp" alt="Client 3" />
+                    </li>
+                    <li>
+                      <span aria-label="More customers">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="16"
+                          height="16"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          class="lucide lucide-plus"
+                          aria-hidden="true"
+                        >
+                          <path d="M5 12h14" />
+                          <path d="M12 5v14" />
+                        </svg>
+                      </span>
+                    </li>
+                  </ul>
+                </div>
+                <div class="customers-number" aria-label="30,000 customers">30K</div>
+                <p class="customers-text">Happy customer we have world-wide.</p>
+              </div>
+            </aside>
+          </div>
+        </div>
+      </section>
 
-    <!-- Section Expertise -->
+      <!-- Section: Expertise -->
 
-    <!-- Section our solutions -->
+      <!-- Section: Our Solutions -->
 
-    <!-- Section Proud projects -->
+      <!-- Section: Proud Projects -->
 
-    <!-- Section Clients feedback -->
+      <!-- Section: Clients Feedback -->
 
-    <!-- Section Need help -->
+      <!-- Section: Need Help -->
 
-    <!-- Get in touch -->
+      <!-- Section: Get in Touch -->
 
-    <!-- Section insight & ideas -->
+      <!-- Section: Insight & Ideas -->
+    </main>
 
     <!-- Footer -->
 
+    <!-- Bootstrap JS -->
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
