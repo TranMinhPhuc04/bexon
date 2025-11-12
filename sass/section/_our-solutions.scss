@@ -1,8 +1,4 @@
-// ============================================
-// Our Solutions Section
-// ============================================
 
-// Variables
 $primary: #1e8a8a;
 $dark: #1a1a1a;
 $dark-2: #252525;
@@ -342,6 +338,168 @@ $gradient-overlay: linear-gradient(to top, $overlay-dark 0%, $overlay-dark-2 50%
   .bg-shape-2 {
     bottom: 0;
     right: 0;
+  }
+}
+
+// Responsive
+@media (max-width: 991px) {
+  .our-solutions-section {
+    margin: 60px 10px;
+
+    .sec-heading {
+      margin-bottom: 40px;
+      padding: 0 20px;
+
+      .sub-title {
+        font-size: 13px;
+        padding: 2px 8px;
+      }
+    }
+
+    .solutions-wrapper {
+      padding: 15px 0 40px;
+    }
+
+    .solutions-slider {
+      padding-bottom: 40px;
+    }
+
+    .solutions-item {
+      height: 400px;
+
+      .solutions-icon {
+        top: 30px;
+        left: 25px;
+        width: 70px;
+        height: 70px;
+
+        i {
+          font-size: 35px;
+        }
+      }
+
+      .solutions-content {
+        padding: 35px 25px 18px;
+
+        .title a {
+          font-size: 20px;
+        }
+
+        .desc {
+          font-size: 13px;
+        }
+      }
+    }
+
+    .swiper-pagination-area {
+      margin-top: 25px;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .our-solutions-section {
+    margin: 40px 0;
+    border-radius: 0;
+
+    .container {
+      padding: 0 15px;
+    }
+
+    .sec-heading {
+      margin-bottom: 30px;
+      padding: 0;
+
+      .sub-title {
+        font-size: 12px;
+        padding: 2px 6px;
+        margin-bottom: 15px;
+      }
+    }
+
+    .sec-title {
+      font-size: 28px;
+    }
+
+    .solutions-wrapper {
+      padding: 10px 0 30px;
+    }
+
+    .solutions-slider {
+      padding-bottom: 30px;
+    }
+
+    .solutions-item {
+      height: 350px;
+
+      .solutions-icon {
+        top: 20px;
+        left: 15px;
+        width: 60px;
+        height: 60px;
+
+        i {
+          font-size: 30px;
+        }
+      }
+
+      .solutions-content {
+        padding: 25px 15px 15px;
+
+        .title {
+          max-width: 100%;
+
+          a {
+            font-size: 18px;
+          }
+        }
+
+        .desc {
+          font-size: 12px;
+        }
+
+        .text-btn {
+          margin-top: 12px;
+          font-size: 14px;
+
+          .btn-icon {
+            width: 26px;
+            height: 26px;
+
+            i {
+              font-size: 14px;
+            }
+          }
+        }
+
+        // Hiển thị desc và button trên mobile (không có hover)
+        .desc,
+        .text-btn {
+          @include visible-content;
+          transform: translateY(0);
+        }
+      }
+    }
+
+    .swiper-pagination-area {
+      margin-top: 20px;
+
+      &.white-pagination .swiper-pagination-bullet {
+        width: 10px;
+        height: 6px;
+        margin: 0 3px;
+
+        &.swiper-pagination-bullet-active {
+          width: 40px;
+        }
+      }
+    }
+
+    // Ẩn background shapes trên mobile
+    .bg-shape-1,
+    .bg-shape-2 {
+      display: none;
+    }
   }
 }
 

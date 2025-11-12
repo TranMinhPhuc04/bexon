@@ -1,0 +1,33 @@
+// ============================================
+// Media Queries - Responsive Design
+// ============================================
+
+// Breakpoints
+$mobile: 767px;
+$tablet: 991px;
+$desktop: 992px;
+
+// Mixin cho responsive
+@mixin mobile {
+  @media (max-width: $mobile) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (min-width: ($mobile + 1px)) and (max-width: $tablet) {
+    @content;
+  }
+}
+
+@mixin tablet-down {
+  @media (max-width: $tablet) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: $desktop) {
+    @content;
+  }
+}
