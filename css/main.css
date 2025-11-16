@@ -2340,4 +2340,116 @@ h2 {
 }
 .clients-feedback .clients-feedback-pagination .swiper-pagination-bullet:nth-child(n+4) {
   display: none;
+}
+
+.need-help {
+  display: flex;
+  width: 100%;
+}
+.need-help .need-help-left {
+  width: 50%;
+  position: relative;
+}
+.need-help .need-help-left img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 12px;
+  max-width: 585px;
+}
+.need-help .need-help-left .need-help-left-content {
+  position: absolute;
+  top: 40px;
+  left: 20px;
+  max-width: 400px;
+}
+.need-help .need-help-left .need-help-left-content h2 {
+  color: #ffffff;
+}
+.need-help .need-help-left .need-help-left-free-call-wrapper {
+  background: #f5f5f5;
+  position: absolute;
+  bottom: 0;
+  right: 60px;
+  max-width: 241px;
+  width: 100%;
+  padding: 15px 0 0 15px;
+  border-top-left-radius: 12px;
+  z-index: 10;
+}
+.need-help .need-help-left .need-help-left-free-call {
+  background-color: #1e8a8a;
+  border-radius: 10px;
+  padding: 30px 25px;
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+}
+.need-help .need-help-left .need-help-left-free-call .free-call-text {
+  max-width: 145px;
+  margin-bottom: 15px;
+}
+.need-help .need-help-left .need-help-left-free-call .free-call-text h3 {
+  font-size: 24px;
+  color: #ffffff;
+  font-weight: 600;
+}
+.need-help .need-help-left .need-help-left-free-call .free-call-icon {
+  margin-bottom: 15px;
+}
+.need-help .need-help-left .need-help-left-free-call .free-call-icon span {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #1a1a1a;
+  border-radius: 50%;
+}
+.need-help .need-help-left .need-help-left-free-call .free-call-number {
+  font-size: 20px;
+  font-weight: 700;
+  color: #ffffff;
+  cursor: pointer;
+  position: relative;
+  margin-bottom: 0;
+  display: inline-block;
+  width: -moz-max-content;
+  width: max-content;
+  max-width: 100%;
+  align-self: flex-start;
+  text-decoration: none;
+  transition: all 0.3s ease-in-out 0s;
+}
+.need-help .need-help-left .need-help-left-free-call .free-call-number::before {
+  content: "";
+  position: absolute;
+  height: 1px;
+  width: 100%;
+  background-color: #ffffff;
+  bottom: -2px;
+  left: 0;
+  transition: width 0.5s ease-in-out 0s;
+}
+.need-help .need-help-left .need-help-left-free-call .free-call-number::after {
+  content: "";
+  position: absolute;
+  height: 1px;
+  width: 0;
+  background-color: #ffffff;
+  bottom: -2px;
+  left: 0;
+  transition: width 1s ease-in-out 0.5s;
+}
+.need-help .need-help-left .need-help-left-free-call .free-call-number:hover::before {
+  width: 0;
+  left: auto;
+  right: 0;
+}
+.need-help .need-help-left .need-help-left-free-call .free-call-number:hover::after {
+  width: 100%;
+}
+.need-help .need-help-right {
+  width: 50%;
 }/*# sourceMappingURL=main.css.map */
