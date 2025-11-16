@@ -862,5 +862,69 @@
         });
       });
     </script>
+
+    <!-- Scroll Animation cho Project Items -->
+    <script>
+      // Scroll animation phụ thuộc vào scroll progress
+      function updateScrollAnimation() {
+        const projectItems = document.querySelectorAll('.project-item');
+        const windowHeight = window.innerHeight;
+
+        projectItems.forEach((item, index) => {
+          const rect = item.getBoundingClientRect();
+          const itemTop = rect.top;
+          const itemHeight = rect.height;
+
+          // Tính toán progress (0-1) dựa trên vị trí scroll
+          // Bắt đầu animate khi item vào viewport (từ dưới lên)
+          // Kết thúc khi item ở giữa viewport
+          const startPoint = windowHeight; // Bắt đầu khi item vừa vào viewport
+          const endPoint = windowHeight * 0.5; // Kết thúc khi item ở giữa viewport
+          
+          let progress = 0;
+          
+          if (itemTop < startPoint && itemTop > endPoint) {
+            // Item đang trong vùng animate
+            progress = 1 - (itemTop - endPoint) / (startPoint - endPoint);
+          } else if (itemTop <= endPoint) {
+            // Item đã scroll qua vùng animate
+            progress = 1;
+          }
+
+          // Giới hạn progress từ 0 đến 1
+          progress = Math.max(0, Math.min(1, progress));
+
+          // Áp dụng transform và opacity dựa trên progress
+          const translateX = 100 * (1 - progress); // Từ 100px về 0px
+          
+          // Item lẻ (1, 3): chạy từ trái vào
+          // Item chẵn (2, 4): chạy từ phải vào
+          const isOdd = (index % 2 === 0); // index 0, 2 là lẻ (trái)
+          const direction = isOdd ? -1 : 1; // -1 là trái, 1 là phải
+          
+          item.style.opacity = progress;
+          item.style.transform = `translateX(${translateX * direction}px)`;
+        });
+      }
+
+      // Tối ưu với requestAnimationFrame
+      let ticking = false;
+      
+      function onScroll() {
+        if (!ticking) {
+          window.requestAnimationFrame(() => {
+            updateScrollAnimation();
+            ticking = false;
+          });
+          ticking = true;
+        }
+      }
+
+      // Gọi hàm khi scroll
+      window.addEventListener('scroll', onScroll, { passive: true });
+      // Gọi ngay khi load trang
+      window.addEventListener('load', updateScrollAnimation);
+      updateScrollAnimation();
+    </script>
   </body>
 </html>

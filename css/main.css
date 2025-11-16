@@ -304,7 +304,7 @@ header {
   text-transform: uppercase;
   font-weight: 700;
   font-family: "Mona Sans", sans-serif;
-  border: 1px dashed rgba(255, 255, 255, 0.2);
+  border: 1px dashed #c9d1d1;
   padding: 6px 10px;
   margin-bottom: 20px;
   border-radius: 4px;
@@ -349,7 +349,7 @@ header {
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  border: 1px solid #c9d1d1;
   border-radius: 50%;
   color: #ffffff;
   text-decoration: none;
@@ -594,7 +594,7 @@ header {
   letter-spacing: 1.4px;
   text-transform: uppercase;
   font-weight: 700;
-  border: 1px dashed rgba(255, 255, 255, 0.2);
+  border: 1px dashed #c9d1d1;
   padding: 2px 10px;
   margin-bottom: 20px;
   border-radius: 4px;
@@ -730,7 +730,7 @@ h2 {
   height: 100%;
   transition: all 0.3s ease;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  border: 1px solid #c9d1d1;
   cursor: pointer;
 }
 .expertise-card:hover,
@@ -1098,7 +1098,7 @@ h2 {
   letter-spacing: 1.4px;
   text-transform: uppercase;
   font-weight: 700;
-  border: 1px dashed rgba(255, 255, 255, 0.2);
+  border: 1px dashed #c9d1d1;
   padding: 2px 10px;
   margin-bottom: 20px;
   border-radius: 4px;
@@ -1592,7 +1592,7 @@ h2 {
   letter-spacing: 1.4px;
   text-transform: uppercase;
   font-weight: 700;
-  border: 1px dashed rgba(255, 255, 255, 0.15);
+  border: 1px dashed #c9d1d1;
   padding: 2px 10px;
   margin-bottom: 20px;
   border-radius: 4px;
@@ -1963,9 +1963,19 @@ h2 {
   }
 }
 .proud-projects .proud-projects-top .sub-title {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
   font-size: 14px;
+  line-height: 1;
+  letter-spacing: 1.4px;
+  text-transform: uppercase;
   color: #0c1e21;
   font-weight: 700;
+  border: 1px dashed #c9d1d1;
+  padding: 2px 10px;
+  margin-bottom: 20px;
+  border-radius: 4px;
 }
 .proud-projects .proud-projects-top .proud-projects-top-content {
   display: flex;
@@ -2025,6 +2035,7 @@ h2 {
   position: relative;
   border-radius: 12px;
   overflow: hidden;
+  will-change: transform, opacity;
 }
 .proud-projects .proud-projects-bottom .proud-projects-bottom-item .project-item img {
   height: 100%;

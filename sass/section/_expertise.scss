@@ -1,7 +1,6 @@
 $primary-color: #1e8a8a;
 $dark-color: #1a1a1a;
 $white-color: #ffffff;
-$border-color: rgba(255, 255, 255, 0.2);
 $background-light: #f5f5f5;
 $hover-shadow: rgba(0, 0, 0, 0.12);
 $card-shadow: rgba(0, 0, 0, 0.08);
@@ -26,7 +25,7 @@ $card-shadow: rgba(0, 0, 0, 0.08);
     letter-spacing: 1.4px;
     text-transform: uppercase;
     font-weight: 700;
-    border: 1px dashed $border-color;
+    border: 1px dashed #c9d1d1;
     padding: 2px 10px;
     margin-bottom: 20px;
     border-radius: 4px;
@@ -153,7 +152,7 @@ h2 {
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
   box-shadow: 0 2px 8px $card-shadow;
-  border: 1px solid $border-color;
+  border: 1px solid #c9d1d1;
   cursor: pointer;
 
   &:hover {
@@ -528,7 +527,7 @@ h2 {
           letter-spacing: 1.4px;
           text-transform: uppercase;
           font-weight: 700;
-          border: 1px dashed $border-color;
+          border: 1px dashed #c9d1d1;
           padding: 2px 10px;
           margin-bottom: 20px;
           border-radius: 4px;

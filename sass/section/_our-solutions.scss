@@ -4,7 +4,6 @@ $dark: #1a1a1a;
 $dark-2: #252525;
 $white: #ffffff;
 $text-muted: rgba(255, 255, 255, 0.7);
-$border-white: rgba(255, 255, 255, 0.15);
 $overlay-dark: rgba(26, 26, 26, 0.95);
 $overlay-dark-2: rgba(26, 26, 26, 0.7);
 $gradient-primary: linear-gradient(-45deg, rgba(30, 138, 138, 0.3) 0%, rgba(30, 138, 138, 0) 50%, rgba(30, 138, 138, 0.3) 100%);
@@ -81,7 +80,7 @@ $gradient-overlay: linear-gradient(to top, $overlay-dark 0%, $overlay-dark-2 50%
       letter-spacing: 1.4px;
       text-transform: uppercase;
       font-weight: 700;
-      border: 1px dashed $border-white;
+      border: 1px dashed #c9d1d1;
       padding: 2px 10px;
       margin-bottom: 20px;
       border-radius: 4px;

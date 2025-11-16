@@ -1,9 +1,19 @@
 .proud-projects {
   .proud-projects-top {
     .sub-title {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
       font-size: 14px;
+      line-height: 1;
+      letter-spacing: 1.4px;
+      text-transform: uppercase;
       color: #0c1e21;
       font-weight: 700;
+      border: 1px dashed #c9d1d1;
+      padding: 2px 10px;
+      margin-bottom: 20px;
+      border-radius: 4px;
     }
 
     .proud-projects-top-content {
@@ -77,7 +87,8 @@
         .project-item {
             position: relative; 
             border-radius: 12px;
-            overflow: hidden; 
+            overflow: hidden;
+            will-change: transform, opacity; // Tối ưu performance 
       
             img {
                 height: 100%;
@@ -158,8 +169,9 @@
               background-color: #1e8a8a;
               transform: translateY(0) rotate(45deg);
             }
-              
 
+              
+              
               
         }
     }
