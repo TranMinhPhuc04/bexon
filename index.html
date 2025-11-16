@@ -1421,31 +1421,8 @@
 
     <!-- Scroll Animation cho Need Help Section -->
     <script>
-      // Kiểm tra xem có phải mobile/tablet không
-      function isMobileOrTablet() {
-        return window.innerWidth <= 991;
-      }
-
       // Scroll animation phụ thuộc vào scroll progress
       function updateNeedHelpAnimation() {
-        // Tắt animation trên mobile/tablet
-        if (isMobileOrTablet()) {
-          const needHelpItems = document.querySelectorAll(".need-help-right-item");
-          const needHelpLeft = document.querySelector(".need-help-left");
-          
-          // Reset về trạng thái ban đầu (hiển thị bình thường)
-          if (needHelpLeft) {
-            needHelpLeft.style.opacity = "1";
-            needHelpLeft.style.transform = "none";
-          }
-          
-          needHelpItems.forEach((item) => {
-            item.style.opacity = "1";
-            item.style.transform = "none";
-          });
-          return;
-        }
-
         const needHelpItems = document.querySelectorAll(".need-help-right-item");
         const needHelpLeft = document.querySelector(".need-help-left");
         const windowHeight = window.innerHeight;
@@ -1512,20 +1489,8 @@
         }
       }
 
-      // Gọi hàm khi scroll (chỉ trên desktop)
-      if (!isMobileOrTablet()) {
-        window.addEventListener("scroll", onNeedHelpScroll, { passive: true });
-      }
-      // Gọi khi resize để cập nhật animation
-      window.addEventListener("resize", function() {
-        updateNeedHelpAnimation();
-        // Thêm/xóa event listener scroll tùy theo kích thước màn hình
-        if (isMobileOrTablet()) {
-          window.removeEventListener("scroll", onNeedHelpScroll);
-        } else {
-          window.addEventListener("scroll", onNeedHelpScroll, { passive: true });
-        }
-      });
+      // Gọi hàm khi scroll
+      window.addEventListener("scroll", onNeedHelpScroll, { passive: true });
       // Gọi ngay khi load trang
       window.addEventListener("load", updateNeedHelpAnimation);
       updateNeedHelpAnimation();
