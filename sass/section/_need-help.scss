@@ -1,17 +1,38 @@
+@import "../_media-queries.scss";
+
 .need-help {
   display: flex;
   width: 100%;
+  flex-wrap: wrap;
 
   .need-help-left {
     width: 50%;
     position: relative;
+    opacity: 0;
+    transform: translateX(-100px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+    height: 792px;
+    border-radius: 12px;
+    overflow: hidden;
+
+    @include tablet-down {
+      opacity: 1;
+      transform: none;
+      transition: none;
+      width: 100%;
+      margin-bottom: 30px;
+      height: 400px;
+    }
+
+    @include mobile {
+      height: 300px;
+    }
 
     img {
         width: 100%;
         height: 100%;
         object-fit: cover;
-        border-radius: 12px;
-        max-width: 585px;
+        display: block;
     }
     
     .need-help-left-content {
@@ -20,8 +41,18 @@
         left: 20px;
         max-width: 400px;
         
+        @include mobile {
+          top: 20px;
+          left: 15px;
+          max-width: calc(100% - 30px);
+        }
+        
         h2 {
             color: #ffffff;
+            
+            @include mobile {
+              font-size: 24px;
+            }
         }
 
     }
@@ -36,6 +67,18 @@
         padding: 15px 0 0 15px;
         border-top-left-radius: 12px;
         z-index: 10;
+
+        @include tablet-down {
+          right: 0px;
+          max-width: 200px;
+          padding: 12px 0 0 12px;
+        }
+
+        @include mobile {
+          right: 0px;
+          max-width: 180px;
+          padding: 10px 0 0 10px;
+        }
     }
 
     .need-help-left-free-call {
@@ -46,18 +89,40 @@
         display: flex;
         flex-direction: column;
 
+        @include tablet-down {
+          padding: 25px 20px;
+        }
+
+        @include mobile {
+          padding: 20px 15px;
+        }
+
         .free-call-text {
           max-width: 145px;
           margin-bottom: 15px;
+
+          @include mobile {
+            max-width: 100%;
+            margin-bottom: 12px;
+          }
+
           h3 {
             font-size: 24px;
             color: #ffffff;
             font-weight: 600;
+
+            @include mobile {
+              font-size: 20px;
+            }
           }
         }
 
         .free-call-icon {
           margin-bottom: 15px;
+
+          @include mobile {
+            margin-bottom: 12px;
+          }
 
           span {
             width: 50px;
@@ -68,7 +133,10 @@
             background-color: #1a1a1a;
             border-radius: 50%;
 
-           
+            @include mobile {
+              width: 40px;
+              height: 40px;
+            }
           }
         }
 
@@ -85,6 +153,10 @@
           align-self: flex-start;
           text-decoration: none;
           transition: all 0.3s ease-in-out 0s;
+
+          @include mobile {
+            font-size: 16px;
+          }
 
           &::before {
             content: "";
@@ -125,5 +197,151 @@
 
   .need-help-right {
     width: 50%;
+
+    .need-help-right-item {
+      background-color: #ffffff;
+      border-radius: 12px;
+      position: relative;
+      padding: 0 30px;
+      margin-bottom: 20px;
+      opacity: 0;
+      transform: translateX(100px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+
+      @include tablet-down {
+        opacity: 1;
+        transform: none;
+        transition: none;
+        padding: 0 20px;
+        margin-bottom: 15px;
+      }
+
+      @include mobile {
+        padding: 0 15px;
+        margin-bottom: 12px;
+      }
+
+
+      h1 {
+        font-size: 20px;
+        font-weight: 700;
+        color: #1a1a1a;
+        line-height: 34px;
+        position: relative;
+        border-bottom: none;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        padding: 27px 60px 0 0;
+        margin-bottom: 0;
+
+        @include mobile {
+          font-size: 18px;
+          line-height: 28px;
+          padding: 20px 50px 0 0;
+        }
+        
+        &::after {
+          content: "";
+          position: absolute;
+          right: 0;
+          top: 27px;
+          width: 34px;
+          height: 34px;
+          border-radius: 50%;
+          border: 1px solid #1e8a8a;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+
+          @include mobile {
+            top: 20px;
+            width: 28px;
+            height: 28px;
+          }
+        }
+
+        &::before {
+          content: "+";
+          position: absolute;
+          right: 0;
+          top: 27px;
+          width: 34px;
+          height: 34px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          color: #1e8a8a;
+          font-size: 24px;
+          font-weight: 400;
+          line-height: 1;
+          z-index: 1;
+          transition: transform 0.3s ease;
+
+          @include mobile {
+            top: 20px;
+            width: 28px;
+            height: 28px;
+            font-size: 20px;
+          }
+        }
+      }
+
+      p {
+        font-size: 16px;
+        font-weight: 400;
+        color: #1a1a1a;
+        line-height: 1.6;
+        margin-top: 20px;
+        margin-bottom: 0;
+        padding-bottom: 0;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease, margin-top 0.3s ease;
+
+        @include mobile {
+          font-size: 14px;
+          margin-top: 15px;
+        }
+      }
+
+      &.active {
+        h1 {
+          border-bottom: 1px dashed #c9d1d1;
+          padding-bottom: 20px;
+
+          @include mobile {
+            padding-bottom: 15px;
+          }
+
+          &::before {
+            content: "−";
+          }
+        }
+
+        p {
+          max-height: 500px;
+          margin-top: 20px;
+          margin-bottom: 0;
+          padding-bottom: 27px;
+
+          @include mobile {
+            margin-top: 15px;
+            padding-bottom: 20px;
+          }
+        }
+      }
+    }
+  }
+
+  // Responsive
+  @include tablet-down {
+    flex-direction: column;
+
+    .need-help-right {
+      width: 100%;
+    }
   }
 }

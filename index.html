@@ -1087,7 +1087,7 @@
           </div>
 
           <div class="need-help-right">
-            <div>
+            <div class="need-help-right-item">
               <h1>What services does Bexon offer to clients?</h1>
               <p>
                 Getting started is easy! Simply reach out to us through our
@@ -1097,9 +1097,36 @@
                 ensuring quality control and timely delivery.
               </p>
             </div>
-            <div></div>
-            <div></div>
-            <div></div>
+            <div class="need-help-right-item">
+              <h1>What services does Bexon offer to clients?</h1>
+              <p>
+                Getting started is easy! Simply reach out to us through our
+                contact form or give us a call, and we'll schedule a
+                consultation to discuss your project and how we can best assist
+                you. Our team keeps you informed throughout the process,
+                ensuring quality control and timely delivery.
+              </p>
+            </div>
+            <div class="need-help-right-item">
+              <h1>What services does Bexon offer to clients?</h1>
+              <p>
+                Getting started is easy! Simply reach out to us through our
+                contact form or give us a call, and we'll schedule a
+                consultation to discuss your project and how we can best assist
+                you. Our team keeps you informed throughout the process,
+                ensuring quality control and timely delivery.
+              </p>
+            </div>
+            <div class="need-help-right-item">
+              <h1>What services does Bexon offer to clients?</h1>
+              <p>
+                Getting started is easy! Simply reach out to us through our
+                contact form or give us a call, and we'll schedule a
+                consultation to discuss your project and how we can best assist
+                you. Our team keeps you informed throughout the process,
+                ensuring quality control and timely delivery.
+              </p>
+            </div>
           </div>
         </div>
       </section>
@@ -1390,6 +1417,143 @@
       // Gọi ngay khi load trang
       window.addEventListener("load", updateScrollAnimation);
       updateScrollAnimation();
+    </script>
+
+    <!-- Scroll Animation cho Need Help Section -->
+    <script>
+      // Kiểm tra xem có phải mobile/tablet không
+      function isMobileOrTablet() {
+        return window.innerWidth <= 991;
+      }
+
+      // Scroll animation phụ thuộc vào scroll progress
+      function updateNeedHelpAnimation() {
+        // Tắt animation trên mobile/tablet
+        if (isMobileOrTablet()) {
+          const needHelpItems = document.querySelectorAll(".need-help-right-item");
+          const needHelpLeft = document.querySelector(".need-help-left");
+          
+          // Reset về trạng thái ban đầu (hiển thị bình thường)
+          if (needHelpLeft) {
+            needHelpLeft.style.opacity = "1";
+            needHelpLeft.style.transform = "none";
+          }
+          
+          needHelpItems.forEach((item) => {
+            item.style.opacity = "1";
+            item.style.transform = "none";
+          });
+          return;
+        }
+
+        const needHelpItems = document.querySelectorAll(".need-help-right-item");
+        const needHelpLeft = document.querySelector(".need-help-left");
+        const windowHeight = window.innerHeight;
+
+        // Animation cho left side
+        if (needHelpLeft) {
+          const rect = needHelpLeft.getBoundingClientRect();
+          const itemTop = rect.top;
+          const startPoint = windowHeight;
+          const endPoint = windowHeight * 0.5;
+
+          let progress = 0;
+
+          if (itemTop < startPoint && itemTop > endPoint) {
+            progress = 1 - (itemTop - endPoint) / (startPoint - endPoint);
+          } else if (itemTop <= endPoint) {
+            progress = 1;
+          }
+
+          progress = Math.max(0, Math.min(1, progress));
+          const translateX = 100 * (1 - progress);
+
+          needHelpLeft.style.opacity = progress;
+          needHelpLeft.style.transform = `translateX(${-translateX}px)`;
+        }
+
+        // Animation cho right items
+        needHelpItems.forEach((item, index) => {
+          const rect = item.getBoundingClientRect();
+          const itemTop = rect.top;
+          const startPoint = windowHeight;
+          const endPoint = windowHeight * 0.5;
+
+          let progress = 0;
+
+          if (itemTop < startPoint && itemTop > endPoint) {
+            progress = 1 - (itemTop - endPoint) / (startPoint - endPoint);
+          } else if (itemTop <= endPoint) {
+            progress = 1;
+          }
+
+          progress = Math.max(0, Math.min(1, progress));
+          const translateX = 100 * (1 - progress);
+
+          // Delay cho mỗi item
+          const delay = index * 0.1;
+          const delayedProgress = Math.max(0, progress - delay);
+
+          item.style.opacity = delayedProgress;
+          item.style.transform = `translateX(${translateX}px)`;
+        });
+      }
+
+      // Tối ưu với requestAnimationFrame
+      let needHelpTicking = false;
+
+      function onNeedHelpScroll() {
+        if (!needHelpTicking) {
+          window.requestAnimationFrame(() => {
+            updateNeedHelpAnimation();
+            needHelpTicking = false;
+          });
+          needHelpTicking = true;
+        }
+      }
+
+      // Gọi hàm khi scroll (chỉ trên desktop)
+      if (!isMobileOrTablet()) {
+        window.addEventListener("scroll", onNeedHelpScroll, { passive: true });
+      }
+      // Gọi khi resize để cập nhật animation
+      window.addEventListener("resize", function() {
+        updateNeedHelpAnimation();
+        // Thêm/xóa event listener scroll tùy theo kích thước màn hình
+        if (isMobileOrTablet()) {
+          window.removeEventListener("scroll", onNeedHelpScroll);
+        } else {
+          window.addEventListener("scroll", onNeedHelpScroll, { passive: true });
+        }
+      });
+      // Gọi ngay khi load trang
+      window.addEventListener("load", updateNeedHelpAnimation);
+      updateNeedHelpAnimation();
+    </script>
+
+    <!-- Accordion cho FAQ -->
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const accordionItems = document.querySelectorAll(".need-help-right-item");
+
+        accordionItems.forEach((item) => {
+          const h1 = item.querySelector("h1");
+          
+          if (h1) {
+            h1.addEventListener("click", function () {
+              // Đóng tất cả các item khác
+              accordionItems.forEach((otherItem) => {
+                if (otherItem !== item) {
+                  otherItem.classList.remove("active");
+                }
+              });
+              
+              // Toggle class active cho item được click
+              item.classList.toggle("active");
+            });
+          }
+        });
+      });
     </script>
   </body>
 </html>
