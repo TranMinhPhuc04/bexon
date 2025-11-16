@@ -1571,7 +1571,10 @@ h2 {
   position: relative;
   z-index: 1;
   overflow: hidden;
-  margin: 80px 20px;
+  margin-top: 80px;
+  margin-bottom: 0;
+  margin-left: 20px;
+  margin-right: 20px;
 }
 .our-solutions-section .container {
   position: relative;
@@ -1962,6 +1965,10 @@ h2 {
     display: none;
   }
 }
+.proud-projects {
+  padding-top: 120px;
+  padding-bottom: 120px;
+}
 .proud-projects .proud-projects-top .sub-title {
   display: inline-flex;
   align-items: center;
@@ -2101,4 +2108,236 @@ h2 {
 .proud-projects .proud-projects-bottom .proud-projects-bottom-item .project-item .project-hover-icon:hover {
   background-color: #1e8a8a;
   transform: translateY(0) rotate(45deg);
+}
+
+.clients-feedback {
+  background-color: #d8e5e5;
+  margin: 80px 0;
+  padding: 100px 0;
+}
+.clients-feedback .container {
+  position: relative;
+}
+.clients-feedback .clients-feedback-wrapper {
+  display: flex;
+  border-radius: 12px;
+  background-color: #1e8a8a;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translateY(-80%);
+  z-index: 1;
+}
+.clients-feedback .clients-feedback-wrapper .clients-feedback-item {
+  width: 25%;
+  padding: 68px 50px 74px 50px;
+  align-items: center;
+  text-align: center;
+  position: relative;
+}
+.clients-feedback .clients-feedback-wrapper .clients-feedback-item .clients-feedback-item-content {
+  display: flex;
+  font-size: 74px;
+  color: #ffffff;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 10px;
+  font-weight: 500;
+  letter-spacing: -1.48px;
+  line-height: 1;
+  text-align: center;
+}
+.clients-feedback .clients-feedback-wrapper .clients-feedback-item .clients-feedback-item-title {
+  font-size: 16px;
+  color: #ffffff;
+}
+.clients-feedback .clients-feedback-wrapper .clients-feedback-item .count-separator {
+  position: absolute;
+  width: 10px;
+  height: 90px;
+  top: 50%;
+  right: -5px;
+  transform: translateY(-50%);
+  opacity: 0.15;
+  background-image: url("../../asset/separator.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  pointer-events: none;
+}
+.clients-feedback .clients-feedback-top {
+  position: relative;
+  z-index: 2;
+  padding-top: 150px;
+}
+.clients-feedback .clients-feedback-top .sub-title {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  color: #1a1a1a;
+  font-size: 14px;
+  line-height: 1;
+  letter-spacing: 1.4px;
+  text-transform: uppercase;
+  font-weight: 700;
+  border: 1px dashed #c9d1d1;
+  padding: 2px 10px;
+  margin-bottom: 20px;
+  border-radius: 4px;
+}
+.clients-feedback .clients-feedback-top > div {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 40px;
+}
+.clients-feedback .clients-feedback-top .clients-feedback-title {
+  margin-bottom: 0;
+  max-width: 500px;
+  font-size: 48px;
+}
+.clients-feedback .clients-feedback-top .clients-feedback-title span {
+  color: #1e8a8a;
+}
+.clients-feedback .clients-feedback-card {
+  margin-top: 20px;
+}
+.clients-feedback .clients-feedback-card .clients-feedback-slider {
+  overflow: hidden;
+}
+.clients-feedback .clients-feedback-card .clients-feedback-slider .swiper-wrapper {
+  display: flex;
+}
+.clients-feedback .clients-feedback-card .clients-feedback-card-item {
+  background-color: #ffffff;
+  width: 100%;
+  border-radius: 12px;
+  height: 100%;
+  flex-shrink: 0;
+}
+.clients-feedback .clients-feedback-card .clients-feedback-card-item .clients-feedback-card-item-content {
+  padding: 40px;
+}
+.clients-feedback .clients-feedback-card .clients-feedback-card-item .clients-feedback-card-item-content svg {
+  width: 46px;
+  height: 46px;
+  color: #1e8a8a;
+}
+.clients-feedback .clients-feedback-card .clients-feedback-card-item .clients-feedback-card-item-content p {
+  margin-top: 15px;
+  font-size: 18px;
+  line-height: 1.5;
+  color: #395155;
+}
+.clients-feedback .clients-feedback-card .clients-feedback-card-item .clients-feedback-card-item-content img {
+  width: 59px;
+  height: 59px;
+}
+.clients-feedback .clients-feedback-card .clients-feedback-card-item .clients-feedback-card-item-content .clients-feedback-card-item-separator {
+  display: block;
+  width: 100%;
+  height: 1px;
+  border: none;
+  border-top: 1px dashed #c9d1d1;
+  margin: 20px 0;
+  background: none;
+}
+.clients-feedback .clients-feedback-card .clients-feedback-card-item .clients-feedback-card-item-content .clients-feedback-card-item-footer {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.clients-feedback .clients-feedback-card .clients-feedback-card-item .clients-feedback-card-item-content .clients-feedback-card-item-footer .clients-feedback-card-item-footer-content {
+  line-height: -1.5;
+}
+.clients-feedback .clients-feedback-card .clients-feedback-card-item .clients-feedback-card-item-content .clients-feedback-card-item-footer .clients-feedback-card-item-footer-content h4 {
+  margin: 0;
+}
+.clients-feedback .swiper-button-next,
+.clients-feedback .swiper-button-prev {
+  position: relative;
+  width: 60px;
+  height: 60px;
+  margin-top: 0;
+  margin-bottom: 0;
+  top: auto;
+  left: auto;
+  right: auto;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+.clients-feedback .swiper-button-next::before,
+.clients-feedback .swiper-button-prev::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border: 1px solid #c9d1d1;
+  border-radius: 50%;
+  background: transparent;
+  transition: all 0.3s ease;
+}
+.clients-feedback .swiper-button-next .swiper-button-icon,
+.clients-feedback .swiper-button-prev .swiper-button-icon {
+  display: none;
+}
+.clients-feedback .swiper-button-next:hover::before,
+.clients-feedback .swiper-button-prev:hover::before {
+  background-color: #1e8a8a;
+  border-color: #1e8a8a;
+}
+.clients-feedback .swiper-button-prev::after,
+.clients-feedback .swiper-button-next::after {
+  display: none;
+}
+.clients-feedback .swiper-button-prev svg,
+.clients-feedback .swiper-button-next svg {
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  color: #1a1a1a;
+  stroke: #1a1a1a;
+  transition: all 0.3s ease;
+  z-index: 1;
+}
+.clients-feedback .swiper-button-prev:hover svg,
+.clients-feedback .swiper-button-next:hover svg {
+  color: #ffffff;
+  stroke: #ffffff;
+}
+.clients-feedback .swiper-navigation {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+.clients-feedback .clients-feedback-pagination {
+  position: relative;
+  margin-top: 40px;
+  text-align: center;
+  bottom: auto !important;
+}
+.clients-feedback .clients-feedback-pagination .swiper-pagination-bullet {
+  width: 8px;
+  height: 8px;
+  background-color: #c9d1d1;
+  opacity: 1;
+  margin: 0 4px;
+  transition: all 0.3s ease;
+  border-radius: 50%;
+}
+.clients-feedback .clients-feedback-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active {
+  width: 24px;
+  height: 8px;
+  background-color: #1e8a8a;
+  border-radius: 4px;
+}
+.clients-feedback .clients-feedback-pagination .swiper-pagination-bullet:nth-child(n+4) {
+  display: none;
 }/*# sourceMappingURL=main.css.map */
