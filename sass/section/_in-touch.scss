@@ -137,4 +137,58 @@
       }
     }
   }
+
+  @media (max-width: 992px) {
+    padding: 80px 40px;
+
+    .get-in-touch-content {
+      flex-direction: column;
+      gap: 40px;
+
+      .get-in-touch-left,
+      .get-in-touch-right {
+        width: 100%;
+      }
+
+      .get-in-touch-right {
+        .get-in-touch-right-wrapper {
+          padding: 40px 45px;
+
+          #form-contact {
+            .form-group {
+              grid-template-columns: 1fr;
+
+              input[name="email"],
+              select[name="subject"] {
+                grid-column: 1;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @media (max-width: 576px) {
+    padding: 60px 24px;
+
+    .get-in-touch-content {
+      .get-in-touch-right {
+        .get-in-touch-right-wrapper {
+          padding: 30px 28px;
+
+          #form-contact {
+            .form-group {
+              gap: 18px;
+            }
+
+            .btn-submit {
+              width: 100%;
+              max-width: none;
+            }
+          }
+        }
+      }
+    }
+  }
 }

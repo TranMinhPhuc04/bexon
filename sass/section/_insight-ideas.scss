@@ -1,7 +1,7 @@
 .insight-ideas {
   .insight-ideas-content {
     padding-top: 120px;
-    padding-bottom: 120px;
+    padding-bottom: 280px;
 
     .insight-ideas-title {
       display: flex;
@@ -67,6 +67,9 @@
           }
 
           &-month {
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
           }
         }
 
@@ -182,6 +185,56 @@
             }
           }
         }
+      }
+    }
+  }
+
+  @media (max-width: 992px) {
+    .insight-ideas-content {
+      padding-bottom: 200px;
+
+      .insight-ideas-title h1 {
+        font-size: 40px;
+        text-align: center;
+      }
+
+      .insight-ideas-card {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 24px;
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    .insight-ideas-content {
+      padding-top: 80px;
+      padding-bottom: 160px;
+
+      .insight-ideas-card {
+        grid-template-columns: 1fr;
+      }
+
+      .insight-ideas-card-item-content-inner {
+        padding-left: 22px;
+        padding-right: 22px;
+      }
+
+      .insight-ideas-card-item-title {
+        font-size: 22px;
+      }
+    }
+  }
+
+  @media (max-width: 576px) {
+    .insight-ideas-content {
+      .insight-ideas-title h1 {
+        font-size: 32px;
+      }
+
+      .insight-ideas-card-item-date {
+        padding: 12px;
+        top: 10px;
+        left: 10px;
       }
     }
   }
