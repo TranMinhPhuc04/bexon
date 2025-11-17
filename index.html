@@ -46,8 +46,10 @@
   <body>
     <!-- Header -->
     <header>
+      <!-- Overlay của Hamburger Menu -->
       <div class="overlay"></div>
 
+      <!-- Hamburger Menu -->
       <aside class="sidebar-right">
         <div class="sidebar-right-content">
           <div class="sidebar-right-content-top">
@@ -252,6 +254,8 @@
         </div>
       </aside>
 
+      <!-- Search Modal -->
+
       <div class="header-container">
         <!-- Logo -->
         <div class="logo">
@@ -412,6 +416,32 @@
         </div>
       </div>
     </header>
+
+    <!-- Search Popup -->
+    <div class="search_popup">
+      <div class="container">
+        <div class="search-box">
+          <input class="search-form-input" type="text" placeholder="Type Words and Hit Enter" />
+          <button type="button" class="search-submit-btn">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="lucide lucide-search"
+            >
+              <path d="m21 21-4.34-4.34" />
+              <circle cx="11" cy="11" r="8" />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
 
     <!-- Main Content -->
     <main>
@@ -1776,6 +1806,34 @@
             item.classList.add("active");
           });
         });
+
+        // Xử lý search popup
+        const searchBtn = document.querySelector(".search-btn");
+        const searchPopup = document.querySelector(".search_popup");
+        
+        if (searchBtn && searchPopup) {
+          searchBtn.addEventListener("click", () => {
+            searchPopup.classList.toggle("search-opened");
+          });
+
+          // Đóng popup khi click ra ngoài
+          document.addEventListener("click", (e) => {
+            if (
+              searchPopup.classList.contains("search-opened") &&
+              !searchPopup.contains(e.target) &&
+              !searchBtn.contains(e.target)
+            ) {
+              searchPopup.classList.remove("search-opened");
+            }
+          });
+
+          // Đóng popup khi nhấn ESC
+          document.addEventListener("keydown", (e) => {
+            if (e.key === "Escape" && searchPopup.classList.contains("search-opened")) {
+              searchPopup.classList.remove("search-opened");
+            }
+          });
+        }
       });
     </script>
 
