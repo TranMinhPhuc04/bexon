@@ -3192,7 +3192,8 @@ footer .footer-bottom .footer-column a {
   transition: color 0.2s;
 }
 footer .footer-bottom .footer-column a:hover {
-  color: #0c1e21;
+  color: #1e8a8a;
+  padding-inline-start: 5px;
 }
 footer .footer-bottom .footer-badge {
   display: inline-flex;
