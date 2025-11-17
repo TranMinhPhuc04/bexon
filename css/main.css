@@ -3231,14 +3231,181 @@ footer .footer-bottom .footer-subscribe .footer-terms a:hover {
   z-index: 9999;
   width: 470px;
   height: calc(100% - 30px);
-  background-color: #0C1E21;
+  background-color: #0c1e21;
   color: white;
-  padding: 20px;
   top: 15px;
   right: 0;
   border-radius: 12px;
   transform: translateX(100%);
   transition: transform 0.3s ease-in-out;
+}
+.sidebar-right-content {
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  position: relative;
+}
+.sidebar-right-content::before {
+  content: "";
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  background: #1e8a8a;
+  opacity: 0.3;
+  z-index: -1;
+  border-radius: 50%;
+  filter: blur(50px);
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+  right: 3%;
+  top: 12%;
+}
+.sidebar-right-content-top-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+.sidebar-right-content-top-header img {
+  max-width: 136px;
+}
+.sidebar-right-content-top-header span {
+  cursor: pointer;
+}
+.sidebar-right-content-top-header span svg {
+  width: 35px;
+  height: 35px;
+  transition: transform 0.3s ease;
+}
+.sidebar-right-content-top-header span:hover {
+  transform: rotate(90deg);
+  transition: transform 0.3s ease;
+}
+.sidebar-right-content-top-description {
+  color: #a9b8b8;
+  margin-bottom: 40px;
+}
+.sidebar-right-content-top-title {
+  font-size: 22px;
+  color: #ffffff;
+  margin-bottom: 20px;
+}
+.sidebar-right-content-top-search {
+  display: flex;
+  align-items: center;
+  width: 390px;
+  height: 60px;
+  padding-left: 24px;
+  background: #ffffff;
+  border-radius: 10px;
+  border: 1px solid #c9d1d1;
+  margin-bottom: 45px;
+}
+.sidebar-right-content-top-search input {
+  width: 100%;
+  height: 100%;
+  border: none;
+  outline: none;
+  background: transparent;
+  font-size: 18px;
+  color: #0c1e21;
+}
+.sidebar-right-content-top-search input::-moz-placeholder {
+  color: rgba(12, 30, 33, 0.45);
+}
+.sidebar-right-content-top-search input::placeholder {
+  color: rgba(12, 30, 33, 0.45);
+}
+.sidebar-right-content-top-search-btn {
+  width: 76px;
+  height: 100%;
+  border: none;
+  background: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  position: relative;
+  transition: background 0.2s ease;
+}
+.sidebar-right-content-top-search-btn::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  background: #d8e3ec;
+}
+.sidebar-right-content-top-search-btn svg {
+  width: 24px;
+  height: 24px;
+}
+.sidebar-right-content-top-contact-title {
+  color: #ffffff;
+  font-size: 22px;
+}
+.sidebar-right-content-top-contact-item {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 10px;
+}
+.sidebar-right-content-top-contact-item span:first-child {
+  color: #a9b8b8;
+  font-size: 14px;
+  margin-bottom: 7px;
+}
+.sidebar-right-content-top-contact-item:nth-child(3) {
+  padding-top: 15px;
+  padding-bottom: 10px;
+}
+.sidebar-right-content-top-contact-item:last-child {
+  padding-top: 15px;
+  padding-bottom: 10px;
+}
+.sidebar-right-content-top-contact-item:last-child p {
+  margin-bottom: 0;
+}
+.sidebar-right-content-footer-title {
+  color: #ffffff;
+  font-size: 22px;
+  margin-bottom: 25px;
+}
+.sidebar-right-content-footer-social ul {
+  display: flex;
+  padding-left: 0;
+  gap: 10px;
+  margin-bottom: 0;
+}
+.sidebar-right-content-footer-social ul li {
+  list-style: none;
+}
+.sidebar-right-content-footer-social ul li a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #556264;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+.sidebar-right-content-footer-social ul li a i {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  line-height: 16px;
+  color: #0c1e21;
+}
+.sidebar-right-content-footer-social ul li a:hover {
+  background-color: #1e8a8a;
+  transform: translateY(-3px);
+}
+.sidebar-right-content-footer-social ul li a:hover i {
+  color: #ffffff;
 }
 
 .sidebar-right.opened {
