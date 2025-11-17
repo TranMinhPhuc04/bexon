@@ -63,7 +63,7 @@
                   viewBox="0 0 24 24"
                   fill="none"
                   stroke="currentColor"
-                  stroke-width="1"
+                  stroke-width="0.5"
                   stroke-linecap="round"
                   stroke-linejoin="round"
                   class="lucide lucide-x-icon lucide-x"
@@ -376,10 +376,26 @@
               stroke-width="2"
               stroke-linecap="round"
               stroke-linejoin="round"
-              class="lucide lucide-search-icon lucide-search"
+              class="lucide lucide-search-icon lucide-search search-icon"
             >
               <path d="m21 21-4.34-4.34" />
               <circle cx="11" cy="11" r="8" />
+            </svg>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="0.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="lucide lucide-x-icon lucide-x close-icon"
+              style="display: none;"
+            >
+              <path d="M18 6 6 18" />
+              <path d="m6 6 12 12" />
             </svg>
           </button>
 
@@ -1810,10 +1826,20 @@
         // Xử lý search popup
         const searchBtn = document.querySelector(".search-btn");
         const searchPopup = document.querySelector(".search_popup");
+        const searchIcon = document.querySelector(".search-icon");
+        const closeIcon = document.querySelector(".close-icon");
         
-        if (searchBtn && searchPopup) {
+        if (searchBtn && searchPopup && searchIcon && closeIcon) {
           searchBtn.addEventListener("click", () => {
-            searchPopup.classList.toggle("search-opened");
+            const isOpened = searchPopup.classList.toggle("search-opened");
+            
+            if (isOpened) {
+              searchIcon.style.display = "none";
+              closeIcon.style.display = "block";
+            } else {
+              searchIcon.style.display = "block";
+              closeIcon.style.display = "none";
+            }
           });
 
           // Đóng popup khi click ra ngoài
@@ -1824,6 +1850,8 @@
               !searchBtn.contains(e.target)
             ) {
               searchPopup.classList.remove("search-opened");
+              searchIcon.style.display = "block";
+              closeIcon.style.display = "none";
             }
           });
 
@@ -1831,6 +1859,8 @@
           document.addEventListener("keydown", (e) => {
             if (e.key === "Escape" && searchPopup.classList.contains("search-opened")) {
               searchPopup.classList.remove("search-opened");
+              searchIcon.style.display = "block";
+              closeIcon.style.display = "none";
             }
           });
         }
