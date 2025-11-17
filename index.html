@@ -77,6 +77,100 @@
               satisfaction & loyalty of our expansion recognized by industry
               leaders.
             </p>
+
+            <!-- Nav Menu for Mobile -->
+            <nav class="sidebar-nav-menu">
+              <ul>
+                <li class="active">
+                  <a href="#">Home</a>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="lucide lucide-chevron-down-icon lucide-chevron-down"
+                  >
+                    <path d="m6 9 6 6 6-6" />
+                  </svg>
+                </li>
+                <li>
+                  <a href="#pages">Pages</a>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="lucide lucide-chevron-down-icon lucide-chevron-down"
+                  >
+                    <path d="m6 9 6 6 6-6" />
+                  </svg>
+                </li>
+                <li>
+                  <a href="#services">Services</a>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="lucide lucide-chevron-down-icon lucide-chevron-down"
+                  >
+                    <path d="m6 9 6 6 6-6" />
+                  </svg>
+                </li>
+                <li>
+                  <a href="#portfolio">Portfolio</a>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="lucide lucide-chevron-down-icon lucide-chevron-down"
+                  >
+                    <path d="m6 9 6 6 6-6" />
+                  </svg>
+                </li>
+                <li>
+                  <a href="#blog">Blog</a>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="lucide lucide-chevron-down-icon lucide-chevron-down"
+                  >
+                    <path d="m6 9 6 6 6-6" />
+                  </svg>
+                </li>
+                <li>
+                  <a href="#contact">Contact</a>
+                </li>
+              </ul>
+            </nav>
   
             <h2 class="sidebar-right-content-top-title">Search Now!</h2>
   
@@ -1661,6 +1755,19 @@
         overlay.addEventListener("click", () => {
           sidebar.classList.remove("opened");
           overlay.classList.remove("opened");
+        });
+
+        // Xử lý active cho sidebar nav menu
+        const sidebarNavItems = document.querySelectorAll(".sidebar-nav-menu li");
+        sidebarNavItems.forEach((item) => {
+          item.addEventListener("click", () => {
+            // Xóa active khỏi tất cả items
+            sidebarNavItems.forEach((otherItem) => {
+              otherItem.classList.remove("active");
+            });
+            // Thêm active cho item được click
+            item.classList.add("active");
+          });
         });
       });
     </script>

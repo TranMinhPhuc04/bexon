@@ -1,4 +1,5 @@
-/* Thiết lập chung cho Aside - Trạng thái Đóng (Menu ẩn) */
+@use "../media-queries" as *;
+
 .sidebar-right {
   position: fixed;
   z-index: 9999;
@@ -68,6 +69,66 @@
       &-description {
         color: #a9b8b8;
         margin-bottom: 40px;
+      }
+
+      .sidebar-nav-menu {
+        display: none;
+
+        ul {
+          display: flex;
+          flex-direction: column;
+          list-style: none;
+          margin: 0;
+          padding: 0;
+          gap: 0;
+        }
+
+        li {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          padding: 18px 0;
+          border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+          width: 100%;
+
+          &:last-child {
+            border-bottom: none;
+          }
+
+          a {
+            font-size: 16px;
+            font-weight: 500;
+            color: #ffffff;
+            text-decoration: none;
+            transition: color 0.3s ease;
+            font-family: "Mona Sans", sans-serif;
+          }
+
+          svg {
+            width: 18px;
+            height: 18px;
+            color: #ffffff;
+            transition: color 0.3s ease, transform 0.3s ease;
+          }
+
+          &:hover {
+            a,
+            svg {
+              color: #1e8a8a;
+            }
+
+            svg {
+              transform: rotate(-180deg);
+            }
+          }
+
+          &.active {
+            a,
+            svg {
+              color: #1e8a8a;
+            }
+          }
+        }
       }
 
       &-title {
@@ -237,4 +298,52 @@
 .overlay.opened {
   opacity: 1;
   visibility: visible;
+}
+
+@include media-xs {
+  .sidebar-right {
+    width: 320px;
+    height: calc(100% - 30px);
+
+    &-content {
+      padding: 40px 20px;
+      
+      &-top {
+        &-description,
+        &-title,
+        &-search {
+          display: none;
+        }
+
+        .sidebar-nav-menu {
+          display: block;
+          margin-bottom: 30px;
+        }
+      }
+    }
+  }
+}
+
+@include media-sm {
+  .sidebar-right {
+    width: 450px;
+    height: calc(100% - 30px);
+
+    &-content {
+      padding: 40px;
+      
+      &-top {
+        &-description,
+        &-title,
+        &-search {
+          display: none;
+        }
+
+        .sidebar-nav-menu {
+          display: block;
+          margin-bottom: 30px;
+        }
+      }
+    }
+  }
 }

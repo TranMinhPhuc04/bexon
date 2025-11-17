@@ -271,22 +271,4 @@ footer {
       }
     }
   }
-
-  @media (max-width: 1200px) {
-    .footer-bottom {
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      padding-left: 20px;
-      padding-right: 20px;
-    }
-  }
-
-  @media (max-width: 768px) {
-    padding-top: 120px;
-
-    .footer-bottom {
-      padding-left: 20px;
-      padding-right: 20px;
-      grid-template-columns: 1fr;
-    }
-  }
 }
