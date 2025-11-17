@@ -2536,4 +2536,265 @@ h2 {
   margin-top: 20px;
   margin-bottom: 0;
   padding-bottom: 27px;
+}
+
+.get-in-touch {
+  background-color: #0c1e21;
+  border-radius: 12px;
+  padding-top: 120px;
+  padding-bottom: 120px;
+}
+.get-in-touch .get-in-touch-content {
+  display: flex;
+  width: 100%;
+}
+.get-in-touch .get-in-touch-content .get-in-touch-left {
+  width: 50%;
+}
+.get-in-touch .get-in-touch-content .get-in-touch-right {
+  width: 50%;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+}
+.get-in-touch .get-in-touch-content .get-in-touch-right h3 {
+  font-size: 14px;
+  font-weight: 700;
+  color: #ffffff;
+  text-transform: uppercase;
+  letter-spacing: 1.4px;
+  border: 1px dashed #c9d1d1;
+  padding: 2px 10px;
+  border-radius: 4px;
+  margin-bottom: 20px;
+  max-width: 150px;
+  display: flex;
+  justify-content: flex-end;
+}
+.get-in-touch .get-in-touch-content .get-in-touch-right .get-in-touch-right-wrapper {
+  padding: 50px 60px;
+}
+.get-in-touch .get-in-touch-content .get-in-touch-right .get-in-touch-right-wrapper .get-in-touch-right-wrapper-title h1 {
+  color: #ffffff;
+}
+.get-in-touch .get-in-touch-content .get-in-touch-right .get-in-touch-right-wrapper .get-in-touch-right-wrapper-title h1 span {
+  color: #1e8a8a;
+}
+.get-in-touch .get-in-touch-content .get-in-touch-right .get-in-touch-right-wrapper .get-in-touch-right-wrapper-title #form-contact .form-group {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px 20px;
+}
+.get-in-touch .get-in-touch-content .get-in-touch-right .get-in-touch-right-wrapper .get-in-touch-right-wrapper-title #form-contact .form-group .btn-submit {
+  display: flex;
+  padding: 10px 5px 10px 25px;
+  background-color: #1e8a8a;
+  border: 0;
+  border-radius: 50px;
+  transition: background-color 0.3s ease;
+  max-width: 200px;
+  margin-top: 20px;
+}
+.get-in-touch .get-in-touch-content .get-in-touch-right .get-in-touch-right-wrapper .get-in-touch-right-wrapper-title #form-contact .form-group .btn-submit .btn-text {
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 16px;
+  margin-right: 10px;
+}
+.get-in-touch .get-in-touch-content .get-in-touch-right .get-in-touch-right-wrapper .get-in-touch-right-wrapper-title #form-contact .form-group .btn-submit .btn-icon {
+  background-color: #333333;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  transition: background-color 0.3s ease;
+  padding: 5px;
+}
+.get-in-touch .get-in-touch-content .get-in-touch-right .get-in-touch-right-wrapper .get-in-touch-right-wrapper-title #form-contact .form-group .btn-submit .btn-icon svg {
+  color: #ffffff;
+  width: 29px;
+  height: 29px;
+  transform: rotate(0deg);
+  transition: transform 0.3s ease;
+}
+.get-in-touch .get-in-touch-content .get-in-touch-right .get-in-touch-right-wrapper .get-in-touch-right-wrapper-title #form-contact .form-group:hover .btn-icon svg {
+  transform: rotate(45deg);
+  transition: transform 0.3s ease;
+}
+.get-in-touch .get-in-touch-content .get-in-touch-right .get-in-touch-right-wrapper .get-in-touch-right-wrapper-title #form-contact input,
+.get-in-touch .get-in-touch-content .get-in-touch-right .get-in-touch-right-wrapper .get-in-touch-right-wrapper-title #form-contact select,
+.get-in-touch .get-in-touch-content .get-in-touch-right .get-in-touch-right-wrapper .get-in-touch-right-wrapper-title #form-contact textarea {
+  border: 0;
+  background-color: transparent;
+  color: #a9b8b8;
+  padding: 11px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+}
+.get-in-touch .get-in-touch-content .get-in-touch-right .get-in-touch-right-wrapper .get-in-touch-right-wrapper-title #form-contact .form-group input[name=name] {
+  grid-column: 1;
+}
+.get-in-touch .get-in-touch-content .get-in-touch-right .get-in-touch-right-wrapper .get-in-touch-right-wrapper-title #form-contact .form-group input[name=email] {
+  grid-column: 2;
+}
+.get-in-touch .get-in-touch-content .get-in-touch-right .get-in-touch-right-wrapper .get-in-touch-right-wrapper-title #form-contact .form-group input[name=phone] {
+  grid-column: 1;
+}
+.get-in-touch .get-in-touch-content .get-in-touch-right .get-in-touch-right-wrapper .get-in-touch-right-wrapper-title #form-contact .form-group select[name=subject] {
+  grid-column: 2;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%23a9b8b8' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right center;
+  padding-right: 30px;
+}
+.get-in-touch .get-in-touch-content .get-in-touch-right .get-in-touch-right-wrapper .get-in-touch-right-wrapper-title #form-contact .form-group textarea[name=message] {
+  grid-column: 1/-1;
+  height: 150px;
+}
+
+.insight-ideas .insight-ideas-content {
+  padding-top: 120px;
+  padding-bottom: 120px;
+}
+.insight-ideas .insight-ideas-content .insight-ideas-title {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.insight-ideas .insight-ideas-content .insight-ideas-title h3 {
+  font-size: 14px;
+  font-weight: 700;
+  color: #0c1e21;
+  text-transform: uppercase;
+  letter-spacing: 1.4px;
+  border: 1px dashed #c9d1d1;
+  padding: 2px 10px;
+  border-radius: 4px;
+  margin-bottom: 20px;
+  max-width: -moz-max-content;
+  max-width: max-content;
+}
+.insight-ideas .insight-ideas-content .insight-ideas-title h1 {
+  font-size: 48px;
+  color: #0c1e21;
+}
+.insight-ideas .insight-ideas-content .insight-ideas-title h1 span {
+  color: #1e8a8a;
+}
+.insight-ideas .insight-ideas-content .insight-ideas-card {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+.insight-ideas .insight-ideas-content .insight-ideas-card .insight-ideas-card-item {
+  position: relative;
+}
+.insight-ideas .insight-ideas-content .insight-ideas-card .insight-ideas-card-item .insight-ideas-card-item-date {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 20px;
+  border-radius: 6px;
+  text-align: center;
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  color: #ffffff;
+}
+.insight-ideas .insight-ideas-content .insight-ideas-card .insight-ideas-card-item .insight-ideas-card-item-date-day {
+  display: block;
+  font-size: 32px;
+  color: #ffffff;
+  font-weight: 500;
+  letter-spacing: -0.96px;
+  margin-bottom: 8px;
+  line-height: 1;
+}
+.insight-ideas .insight-ideas-content .insight-ideas-card .insight-ideas-card-item img {
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+}
+.insight-ideas .insight-ideas-content .insight-ideas-card .insight-ideas-card-item-content {
+  background-color: #fff;
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 12px;
+}
+.insight-ideas .insight-ideas-content .insight-ideas-card .insight-ideas-card-item-content-inner {
+  padding-top: 25px;
+  padding-bottom: 35px;
+  padding-left: 28px;
+  padding-right: 28px;
+}
+.insight-ideas .insight-ideas-content .insight-ideas-card .insight-ideas-card-item-content-inner-wrapper {
+  display: flex;
+}
+.insight-ideas .insight-ideas-content .insight-ideas-card .insight-ideas-card-item-content-inner-wrapper-tag a {
+  border: 1px solid #c9d1d1;
+  font-size: 16px;
+  line-height: 1;
+  color: #1a1a1a;
+  font-weight: 500;
+  padding: 2px 7px 4px;
+  display: inline-flex;
+  overflow: hidden;
+  border-radius: 4px;
+  -webkit-backdrop-filter: blur(15px);
+          backdrop-filter: blur(15px);
+  margin-right: 10px;
+}
+.insight-ideas .insight-ideas-content .insight-ideas-card .insight-ideas-card-item-content-inner-wrapper-tag:hover a {
+  background-color: #1e8a8a;
+}
+.insight-ideas .insight-ideas-content .insight-ideas-card .insight-ideas-card-item-content-inner-wrapper p {
+  color: #67787a;
+}
+.insight-ideas .insight-ideas-content .insight-ideas-card .insight-ideas-card-item-content-inner-wrapper p span {
+  color: #1a1a1a;
+}
+.insight-ideas .insight-ideas-content .insight-ideas-card .insight-ideas-card-item-content-inner-wrapper p:hover span {
+  color: #1e8a8a;
+  cursor: pointer;
+}
+.insight-ideas .insight-ideas-content .insight-ideas-card .insight-ideas-card-item-content-inner h2 {
+  font-size: 24px;
+  font-weight: 600;
+}
+.insight-ideas .insight-ideas-content .insight-ideas-card .insight-ideas-card-item-content-inner a {
+  color: #0c1e21;
+  font-size: 16px;
+  font-weight: 600;
+}
+.insight-ideas .insight-ideas-content .insight-ideas-card .insight-ideas-card-item-content-inner a span {
+  background-color: #333333;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  transition: background-color 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 10px;
+  margin-top: 20px;
+}
+.insight-ideas .insight-ideas-content .insight-ideas-card .insight-ideas-card-item-content-inner a span svg {
+  color: #ffffff;
+  width: 16px;
+  height: 16px;
+  transform: rotate(0deg);
+  transition: transform 0.3s ease;
+}
+.insight-ideas .insight-ideas-content .insight-ideas-card .insight-ideas-card-item-content-inner a:hover span {
+  background-color: #1e8a8a;
+}
+.insight-ideas .insight-ideas-content .insight-ideas-card .insight-ideas-card-item-content-inner a:hover span svg {
+  transform: rotate(45deg);
+  transition: transform 0.3s ease;
 }/*# sourceMappingURL=main.css.map */
