@@ -300,6 +300,30 @@
   visibility: visible;
 }
 
+@include media-sm {
+  .sidebar-right {
+    width: 450px;
+    height: calc(100% - 30px);
+
+    &-content {
+      padding: 40px;
+      
+      &-top {
+        &-description,
+        &-title,
+        &-search {
+          display: none;
+        }
+
+        .sidebar-nav-menu {
+          display: block;
+          margin-bottom: 30px;
+        }
+      }
+    }
+  }
+}
+
 @include media-xs {
   .sidebar-right {
     width: 320px;
@@ -324,26 +348,4 @@
   }
 }
 
-@include media-sm {
-  .sidebar-right {
-    width: 450px;
-    height: calc(100% - 30px);
 
-    &-content {
-      padding: 40px;
-      
-      &-top {
-        &-description,
-        &-title,
-        &-search {
-          display: none;
-        }
-
-        .sidebar-nav-menu {
-          display: block;
-          margin-bottom: 30px;
-        }
-      }
-    }
-  }
-}
