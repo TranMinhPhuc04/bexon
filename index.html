@@ -46,6 +46,8 @@
   <body>
     <!-- Header -->
     <header>
+      <div class="overlay"></div>
+      
       <aside class="sidebar-right">
         <div class="sidebar-right-content">
           <div class="sidebar-right-content-top">
@@ -1644,13 +1646,21 @@
         const menuButton = document.querySelector(".hamburger-menu");
         const closeButton = document.querySelector(".close-sidebar");
         const sidebar = document.querySelector(".sidebar-right");
+        const overlay = document.querySelector(".overlay");
 
         menuButton.addEventListener("click", () => {
           sidebar.classList.toggle("opened");
+          overlay.classList.toggle("opened");
         });
 
         closeButton.addEventListener("click", () => {
           sidebar.classList.remove("opened");
+          overlay.classList.remove("opened");
+        });
+
+        overlay.addEventListener("click", () => {
+          sidebar.classList.remove("opened");
+          overlay.classList.remove("opened");
         });
       });
     </script>

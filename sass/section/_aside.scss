@@ -21,20 +21,22 @@
     justify-content: space-between;
     height: 100%;
     position: relative;
+    overflow-y: auto;
+    overflow-x: hidden;
 
     &::before {
-        content: "";
-        position: absolute;
-        width: 200px;
-        height: 200px;
-        background: #1e8a8a;
-        opacity: 0.30;
-        z-index: -1;
-        border-radius: 50%;
-        filter: blur(50px);
-        backdrop-filter: blur(10px);
-        right: 3%;
-        top: 12%;
+      content: "";
+      position: absolute;
+      width: 200px;
+      height: 200px;
+      background: #1e8a8a;
+      opacity: 0.3;
+      z-index: -1;
+      border-radius: 50%;
+      filter: blur(50px);
+      backdrop-filter: blur(10px);
+      right: 3%;
+      top: 12%;
     }
 
     &-top {
@@ -171,43 +173,41 @@
 
       &-social {
         ul {
-            display: flex;
-            padding-left: 0;
-            gap: 10px;
-            margin-bottom: 0;
+          display: flex;
+          padding-left: 0;
+          gap: 10px;
+          margin-bottom: 0;
 
           li {
             list-style: none;
 
             a {
+              display: inline-flex;
+              align-items: center;
+              justify-content: center;
+              background-color: #556264;
+              width: 28px;
+              height: 28px;
+              border-radius: 50%;
+              transition: transform 0.3s ease, background-color 0.3s ease;
+
+              i {
                 display: inline-flex;
                 align-items: center;
                 justify-content: center;
-                background-color: #556264;
-                width: 28px;
-                height: 28px;
-                border-radius: 50%;
-                transition: transform 0.3s ease, 
-                background-color 0.3s ease;
+                font-size: 16px;
+                line-height: 16px;
+                color: #0c1e21;
+              }
+
+              &:hover {
+                background-color: #1e8a8a;
+                transform: translateY(-3px);
 
                 i {
-                    display: inline-flex;
-                    align-items: center;
-                    justify-content: center;
-                    font-size: 16px;
-                    line-height: 16px;
-                    color: #0c1e21;
+                  color: #ffffff;
                 }
-
-                &:hover {
-                    background-color: #1e8a8a;
-                    transform: translateY(-3px);
-
-                    i {
-                        color: #ffffff;
-                    }
-                }
-
+              }
             }
           }
         }
@@ -218,4 +218,23 @@
 
 .sidebar-right.opened {
   transform: translateX(0);
+}
+
+.overlay {
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 9999;
+  inset-inline-start: 0;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: all 0.3s ease-out 0s;
+  transition: all 0.3s ease-out 0s;
+  backdrop-filter: blur(10px);
+}
+
+.overlay.opened {
+  opacity: 1;
+  visibility: visible;
 }
