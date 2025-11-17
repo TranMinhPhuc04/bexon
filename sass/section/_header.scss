@@ -1,5 +1,22 @@
 @use "../media-queries" as *;
 
+// Animation gelatine
+@keyframes gelatine {
+  0%,
+  100% {
+    transform: scale(1, 1);
+  }
+  25% {
+    transform: scale(0.7, 1.1);
+  }
+  50% {
+    transform: scale(1.1, 0.7);
+  }
+  75% {
+    transform: scale(0.95, 1.05);
+  }
+}
+
 header {
   margin-left: 20px;
   margin-right: 20px;
@@ -112,7 +129,11 @@ header {
           width: 18px;
           height: 18px;
           color: #333333;
-          transition: color 0.3s ease, transform 0.3s ease;
+          transition: transform 0.3s ease;
+
+          &:hover {
+            animation: gelatine 0.6s;
+          }
         }
       }
 
@@ -125,6 +146,39 @@ header {
         display: flex;
         align-items: center;
         gap: 10px;
+        transition: all 0.3s ease-in-out 0s;
+
+        .btn-lets-talk-text {
+          overflow: hidden;
+          display: flex;
+          flex-direction: column;
+          line-height: 1;
+
+          span {
+            display: flex;
+            line-height: 1;
+            text-shadow: 0 30px 0;
+            backface-visibility: hidden;
+            transform: translateY(0);
+            transition: transform 0.4s ease-in-out;
+
+            &:nth-child(2) {
+              transform: translateY(-30px);
+            }
+          }
+        }
+
+        &:hover {
+          .btn-lets-talk-text {
+            span:first-child {
+              transform: translateY(-30px);
+            }
+
+            span:nth-child(2) {
+              transform: translateY(0);
+            }
+          }
+        }
 
         .btn-icon-wrapper {
           background-color: #0c1e21;
@@ -141,6 +195,13 @@ header {
             width: 20px;
             height: 20px;
             transform: rotate(0deg);
+            transition: transform 0.3s ease;
+          }
+        }
+
+        &:hover {
+          svg {
+            transform: rotate(45deg);
             transition: transform 0.3s ease;
           }
         }

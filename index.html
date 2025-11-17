@@ -47,13 +47,13 @@
     <!-- Header -->
     <header>
       <div class="overlay"></div>
-      
+
       <aside class="sidebar-right">
         <div class="sidebar-right-content">
           <div class="sidebar-right-content-top">
             <div class="sidebar-right-content-top-header">
               <img src="./asset/logo-2.webp" alt="Bexon Logo" />
-              <span class="close-sidebar" style="cursor: pointer;">
+              <span class="close-sidebar" style="cursor: pointer">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="24"
@@ -71,7 +71,7 @@
                 </svg>
               </span>
             </div>
-  
+
             <p class="sidebar-right-content-top-description">
               Developing personalize our customer journeys to increase
               satisfaction & loyalty of our expansion recognized by industry
@@ -171,9 +171,9 @@
                 </li>
               </ul>
             </nav>
-  
+
             <h2 class="sidebar-right-content-top-title">Search Now!</h2>
-  
+
             <div class="sidebar-right-content-top-search">
               <input type="text" placeholder="Search..." />
               <button class="sidebar-right-content-top-search-btn">
@@ -194,20 +194,22 @@
                 </svg>
               </button>
             </div>
-  
+
             <div class="sidebar-right-content-top-contact">
-              <h4 class="sidebar-right-content-top-contact-title">Contact Info</h4>
-  
+              <h4 class="sidebar-right-content-top-contact-title">
+                Contact Info
+              </h4>
+
               <div class="sidebar-right-content-top-contact-item">
                 <span>Phone</span>
                 <a href="tel:10095447818">+1 (009) 544-7818</a>
               </div>
-  
+
               <div class="sidebar-right-content-top-contact-item">
                 <span>Email</span>
                 <span>info@bexon.com</span>
               </div>
-  
+
               <div class="sidebar-right-content-top-contact-item">
                 <span>Location</span>
                 <p>993 Renner Burg, West Rond, MT 94251-030</p>
@@ -217,7 +219,7 @@
 
           <div class="sidebar-right-content-footer">
             <h4 class="sidebar-right-content-footer-title">Follow Us</h4>
-  
+
             <div class="sidebar-right-content-footer-social">
               <ul>
                 <!-- facebook -->
@@ -378,7 +380,10 @@
           </button>
 
           <a href="#contact" class="btn-lets-talk">
-            <span>Let's Talk</span>
+            <span class="btn-lets-talk-text">
+              <span>Let's Talk</span>
+            </span>
+            
 
             <span class="btn-icon-wrapper">
               <svg
@@ -391,10 +396,10 @@
                 stroke-width="2"
                 stroke-linecap="round"
                 stroke-linejoin="round"
-                class="lucide lucide-arrow-right-icon lucide-arrow-right"
+                class="lucide lucide-arrow-up-right-icon lucide-arrow-up-right"
               >
-                <path d="M5 12h14" />
-                <path d="m12 5 7 7-7 7" />
+                <path d="M7 7h10v10" />
+                <path d="M7 17 17 7" />
               </svg>
             </span>
           </a>
@@ -1758,7 +1763,9 @@
         });
 
         // Xử lý active cho sidebar nav menu
-        const sidebarNavItems = document.querySelectorAll(".sidebar-nav-menu li");
+        const sidebarNavItems = document.querySelectorAll(
+          ".sidebar-nav-menu li"
+        );
         sidebarNavItems.forEach((item) => {
           item.addEventListener("click", () => {
             // Xóa active khỏi tất cả items
