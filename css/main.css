@@ -2439,6 +2439,7 @@ h2 {
 .need-help {
   display: flex;
   width: 100%;
+  padding-bottom: 120px;
 }
 .need-help .need-help-left {
   width: 50%;
