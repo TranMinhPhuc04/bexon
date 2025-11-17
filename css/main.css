@@ -2689,6 +2689,7 @@ h2 {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 30px;
+  margin-top: 20px;
 }
 .insight-ideas .insight-ideas-content .insight-ideas-card .insight-ideas-card-item {
   position: relative;
@@ -2763,9 +2764,21 @@ h2 {
   color: #1e8a8a;
   cursor: pointer;
 }
-.insight-ideas .insight-ideas-content .insight-ideas-card .insight-ideas-card-item-content-inner h2 {
+.insight-ideas .insight-ideas-content .insight-ideas-card .insight-ideas-card-item-content-inner .insight-ideas-card-item-title {
+  display: inline;
+  text-decoration: none;
+  color: #0c1e21;
   font-size: 24px;
   font-weight: 600;
+  margin-top: 12px;
+  background-image: linear-gradient(to left, #000000, #000000);
+  background-repeat: no-repeat;
+  background-position: 0 100%;
+  background-size: 0 2px;
+  transition: background-size 1.2s ease;
+}
+.insight-ideas .insight-ideas-content .insight-ideas-card .insight-ideas-card-item-content-inner .insight-ideas-card-item-title:hover {
+  background-size: 100% 2px;
 }
 .insight-ideas .insight-ideas-content .insight-ideas-card .insight-ideas-card-item-content-inner a {
   color: #0c1e21;
