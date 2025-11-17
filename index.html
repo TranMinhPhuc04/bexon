@@ -37,6 +37,75 @@
   <body>
     <!-- Header -->
     <header>
+      <aside class="sidebar-right">
+        <div>
+          <div>
+            <img src="./asset/logo-2.webp" alt="Bexon Logo" />
+            <span>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="lucide lucide-x-icon lucide-x"
+              >
+                <path d="M18 6 6 18" />
+                <path d="m6 6 12 12" />
+              </svg>
+            </span>
+          </div>
+
+          <p></p>
+
+          <h3></h3>
+
+          <div>
+            <input type="text" placeholder="Search..." />
+            <span>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="lucide lucide-search-icon lucide-search"
+              >
+                <path d="m21 21-4.34-4.34" />
+                <circle cx="11" cy="11" r="8" />
+              </svg>
+            </span>
+          </div>
+
+          <div>
+            <h4></h4>
+
+            <div>
+              <span></span>
+              <a href=""></a>
+            </div>
+
+            <div>
+              <span>Email</span>
+              <span>info@bexon.com</span>
+            </div>
+
+            <div>
+              <span>Location</span>
+              <p>993 Renner Burg, West Rond, MT 94251-030</p>
+            </div>
+          </div>
+        </div>
+      </aside>
+
       <div class="header-container">
         <!-- Logo -->
         <div class="logo">
@@ -165,19 +234,20 @@
           </button>
 
           <a href="#contact" class="btn-lets-talk">
-            Let's Talk
+            <span>Let's Talk</span>
+
             <span class="btn-icon-wrapper">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                width="16"
-                height="16"
+                width="24"
+                height="24"
                 viewBox="0 0 24 24"
                 fill="none"
                 stroke="currentColor"
                 stroke-width="2"
                 stroke-linecap="round"
                 stroke-linejoin="round"
-                class="btn-arrow-icon"
+                class="lucide lucide-arrow-right-icon lucide-arrow-right"
               >
                 <path d="M5 12h14" />
                 <path d="m12 5 7 7-7 7" />
@@ -1506,7 +1576,6 @@
       </div>
 
       <div></div>
-     
     </footer>
     <!-- Bootstrap JS -->
     <script
@@ -1520,6 +1589,18 @@
 
     <!-- CountUp.js -->
     <script src="https://inorganik.github.io/countUp.js/dist/countUp.umd.js"></script>
+
+    <!-- Aside JS -->
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const menuButton = document.querySelector(".hamburger-menu");
+        const sidebar = document.querySelector(".sidebar-right");
+
+        menuButton.addEventListener("click", () => {
+          sidebar.classList.toggle("opened");
+        });
+      });
+    </script>
 
     <!-- Swiper Carousel Init -->
     <script>

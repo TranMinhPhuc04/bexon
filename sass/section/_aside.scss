@@ -1,0 +1,23 @@
+/* Thiết lập chung cho Aside - Trạng thái Đóng (Menu ẩn) */
+.sidebar-right {
+    position: fixed;
+    z-index: 9999;
+    width: 470px;
+    height: calc(100% - 30px); 
+    background-color: #0C1E21;
+    color: white; 
+    padding: 20px;
+    top: 15px; 
+    right: 0; 
+
+    border-radius: 12px;
+    
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in-out; 
+}
+
+.sidebar-right.opened {
+    transform: translateX(0);
+}
+
+

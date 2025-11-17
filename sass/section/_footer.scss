@@ -253,11 +253,20 @@ footer {
         input {
           width: 18px;
           height: 18px;
+
+          // Khi được checked thì background-color sẽ là #000000
+          &:checked {
+            background-color: #000000;
+          }
         }
 
         a {
           font-weight: 700;
           color: #0c1e21;
+
+          &:hover {
+            color: #1e8a8a;
+          }
         }
       }
     }

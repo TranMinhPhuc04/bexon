@@ -32,35 +32,34 @@ header {
   margin-left: 20px;
   margin-right: 20px;
   background-color: #ffffff;
-  border-bottom: 1px solid #e0e0e0;
-  border-radius: 0 0 12px 12px;
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 12px;
+  z-index: 10;
 }
-
-.header-container {
+header .header-container {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 1.25rem 1rem;
+  height: 90px;
+  padding-left: 12px;
+  padding-right: 12px;
 }
-
-.logo a {
+header .header-container .logo a {
   display: flex;
   align-items: center;
   gap: 0.75rem;
   text-decoration: none;
 }
-.logo img {
+header .header-container .logo img {
   width: 136px;
   height: auto;
 }
-.logo-text {
+header .header-container .logo-text {
   font-size: 1.5rem;
   font-weight: 600;
   color: #333333;
-  font-family: "Mona Sans", sans-serif;
 }
-
-.nav-menu ul {
+header .header-container .nav-menu ul {
   display: flex;
   align-items: center;
   gap: 2rem;
@@ -68,49 +67,49 @@ header {
   margin: 0;
   padding: 0;
 }
-.nav-menu li {
+header .header-container .nav-menu li {
   display: flex;
   align-items: center;
   gap: 4px;
   position: relative;
 }
-.nav-menu li a {
-  font-family: sans-serif;
+header .header-container .nav-menu li:hover {
+  cursor: pointer;
+}
+header .header-container .nav-menu li a {
   font-size: 16px;
   font-weight: 500;
-  color: #333333;
+  color: #0c1e21;
   text-decoration: none;
   transition: color 0.3s ease;
 }
-.nav-menu li svg {
+header .header-container .nav-menu li svg {
   width: 18px;
   height: 18px;
   color: #333333;
   transition: color 0.3s ease, transform 0.3s ease;
 }
-.nav-menu li:hover a,
-.nav-menu li:hover svg {
+header .header-container .nav-menu li:hover a,
+header .header-container .nav-menu li:hover svg {
   color: #1e8a8a;
 }
-.nav-menu li:hover svg {
+header .header-container .nav-menu li:hover svg {
   transform: rotate(-180deg);
 }
-.nav-menu li.active a,
-.nav-menu li.active svg {
+header .header-container .nav-menu li.active a,
+header .header-container .nav-menu li.active svg {
   color: #1e8a8a;
 }
-
-.header-actions {
+header .header-container .header-actions {
   display: flex;
   align-items: center;
   gap: 1rem;
 }
-
-.search-btn {
-  width: 40px;
-  height: 40px;
+header .header-container .header-actions .search-btn {
+  width: 44px;
+  height: 44px;
   border-radius: 50%;
-  background-color: #f0f0f0;
+  background-color: #ecf0f0;
   border: none;
   cursor: pointer;
   display: flex;
@@ -118,128 +117,67 @@ header {
   justify-content: center;
   transition: background-color 0.3s ease;
 }
-.search-btn:hover {
-  background-color: #e5e5e5;
-}
-.search-btn svg {
-  width: 24px;
-  height: 24px;
+header .header-container .header-actions .search-btn svg {
+  width: 18px;
+  height: 18px;
   color: #333333;
+  transition: color 0.3s ease, transform 0.3s ease;
 }
-
-.btn-lets-talk {
+header .header-container .header-actions .btn-lets-talk {
+  padding: 5px 5px 5px 25px;
+  background-color: #1e8a8a;
+  font-weight: 600;
+  color: #ffffff;
+  border-radius: 50px;
   display: flex;
   align-items: center;
-  gap: 0.75rem;
-  padding: 5px 25px;
-  min-height: 48px;
-  background-color: #1e8a8a;
-  color: #ffffff;
-  text-decoration: none;
-  border-radius: 50px;
-  font-family: "Mona Sans", sans-serif;
-  font-size: 16px;
-  font-weight: 500;
-  transition: background-color 0.3s ease;
+  gap: 10px;
 }
-.btn-lets-talk .btn-icon-wrapper {
-  width: 24px;
-  height: 24px;
+header .header-container .header-actions .btn-lets-talk .btn-icon-wrapper {
+  background-color: #0c1e21;
   border-radius: 50%;
-  background-color: #333333;
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-shrink: 0;
-  rotate: -45deg;
-  transition: rotate 0.3s ease;
+  width: 35px;
+  height: 35px;
+  transition: background-color 0.3s ease;
 }
-.btn-lets-talk .btn-icon-wrapper svg {
-  width: 16px;
-  height: 16px;
+header .header-container .header-actions .btn-lets-talk .btn-icon-wrapper svg {
   color: #ffffff;
+  width: 20px;
+  height: 20px;
+  transform: rotate(0deg);
   transition: transform 0.3s ease;
-  transform-origin: center;
 }
-.btn-lets-talk:hover .btn-icon-wrapper {
-  rotate: 0deg;
-}
-
-.hamburger-menu {
+header .header-container .header-actions .hamburger-menu {
+  border: none;
+  background: transparent;
+  padding: 0;
+  cursor: pointer;
+  width: 25px;
+  height: 25px;
   display: flex;
   flex-direction: column;
-  gap: 4px;
-  background: transparent;
-  border: none;
-  cursor: pointer;
-  padding: 0.5rem;
+  justify-content: space-around;
+  align-items: flex-start;
 }
-.hamburger-menu span {
-  width: 24px;
+header .header-container .header-actions .hamburger-menu span {
+  display: block;
   height: 2px;
-  background-color: #333333;
+  background-color: #333;
+  border-radius: 2px;
   transition: all 0.3s ease;
+  margin: 0;
 }
-.hamburger-menu:hover span {
-  background-color: #1e8a8a;
+header .header-container .header-actions .hamburger-menu span:first-child,
+header .header-container .header-actions .hamburger-menu span:last-child {
+  width: 100%;
+}
+header .header-container .header-actions .hamburger-menu span:nth-child(2) {
+  width: 60%;
 }
 
-@media (max-width: 991px) {
-  header {
-    margin-left: 10px;
-    margin-right: 10px;
-  }
-  .header-container {
-    padding: 1rem;
-  }
-  .nav-menu {
-    display: none;
-  }
-  .header-actions {
-    gap: 0.75rem;
-  }
-  .btn-lets-talk {
-    padding: 5px 20px;
-    font-size: 14px;
-  }
-}
-@media (max-width: 767px) {
-  header {
-    margin-left: 0;
-    margin-right: 0;
-    border-radius: 0;
-  }
-  .header-container {
-    padding: 0.75rem 1rem;
-  }
-  .logo img {
-    width: 100px;
-  }
-  .search-btn {
-    width: 36px;
-    height: 36px;
-  }
-  .search-btn svg {
-    width: 20px;
-    height: 20px;
-  }
-  .btn-lets-talk {
-    padding: 5px 15px;
-    min-height: 40px;
-    font-size: 13px;
-  }
-  .btn-lets-talk .btn-icon-wrapper {
-    width: 20px;
-    height: 20px;
-  }
-  .btn-lets-talk .btn-icon-wrapper svg {
-    width: 14px;
-    height: 14px;
-  }
-  .hamburger-menu span {
-    width: 20px;
-  }
-}
 .banner-section {
   margin-top: 15px;
   position: relative;
@@ -3259,9 +3197,15 @@ footer .footer-bottom .footer-subscribe .footer-terms input {
   width: 18px;
   height: 18px;
 }
+footer .footer-bottom .footer-subscribe .footer-terms input:checked {
+  background-color: #000000;
+}
 footer .footer-bottom .footer-subscribe .footer-terms a {
   font-weight: 700;
   color: #0c1e21;
+}
+footer .footer-bottom .footer-subscribe .footer-terms a:hover {
+  color: #1e8a8a;
 }
 @media (max-width: 1200px) {
   footer .footer-bottom {
@@ -3279,4 +3223,24 @@ footer .footer-bottom .footer-subscribe .footer-terms a {
     padding-right: 20px;
     grid-template-columns: 1fr;
   }
+}
+
+/* Thiết lập chung cho Aside - Trạng thái Đóng (Menu ẩn) */
+.sidebar-right {
+  position: fixed;
+  z-index: 9999;
+  width: 470px;
+  height: calc(100% - 30px);
+  background-color: #0C1E21;
+  color: white;
+  padding: 20px;
+  top: 15px;
+  right: 0;
+  border-radius: 12px;
+  transform: translateX(100%);
+  transition: transform 0.3s ease-in-out;
+}
+
+.sidebar-right.opened {
+  transform: translateX(0);
 }/*# sourceMappingURL=main.css.map */
