@@ -301,6 +301,9 @@ header .header-container .header-actions .hamburger-menu span:last-child {
 header .header-container .header-actions .hamburger-menu span:nth-child(2) {
   width: 60%;
 }
+header .header-container .header-actions:hover .hamburger-menu span:nth-child(2) {
+  width: 100%;
+}
 
 @media (max-width: 640px) {
   header .header-container .nav-menu {

@@ -313,6 +313,14 @@ header {
           width: 60%;
         }
       }
+
+      &:hover {
+        .hamburger-menu {
+          span:nth-child(2) {
+            width: 100%;
+          }
+        }
+      }
     }
   }
 }
