@@ -12,21 +12,21 @@ $breakpoint-lg: 1400px;
 
 // Ipad
 @mixin media-sm {
-  @media (max-width: $breakpoint-sm) {
+  @media (min-width: $breakpoint-xs + 1px) and (max-width: $breakpoint-sm) {
     @content;
   }
 }
 
 // Laptop
 @mixin media-md {
-  @media (max-width: $breakpoint-md) {
+  @media (min-width: $breakpoint-sm + 1px) and (max-width: $breakpoint-md) {
     @content;
   }
 }
 
 // Màn hình lớn
 @mixin media-lg {
-  @media (max-width: $breakpoint-lg) {
+  @media (min-width: $breakpoint-md + 1px) and (max-width: $breakpoint-lg) {
     @content;
   }
 }

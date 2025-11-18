@@ -339,6 +339,7 @@ header {
 @mixin mobile-header-styles {
   header {
     .header-container {
+      margin-bottom: 20px;
       .nav-menu {
         display: none;
       }

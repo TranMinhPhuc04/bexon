@@ -11,10 +11,42 @@ body {
   color: #1a1a1a;
 
   main {
-    display: none;
+    .recognized {
+      .partners-wrapper {
+        display: none;
+      }
+
+      .success {
+        display: none;
+      }
+    }
+
+    .our-solutions-section {
+      display: none;
+    }
+
+    .clients-feedback {
+      display: none;
+    }
+
+    .need-help-section {
+      display: none;
+    }
+
+    .get-in-touch {
+      display: none;
+    }
+
+    .insight-ideas {
+      display: none;
+    }
+
+    .proud-projects {
+      display: none;
+    }
   }
 
-  section {
+  .cta-footer {
     display: none;
   }
 
@@ -37,4 +69,14 @@ img {
   max-width: 100%;
   height: auto;
   display: block;
+}
+
+.section-gap-x {
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.section-gap-y {
+  padding-top: 120px;
+  padding-bottom: 120px;
 }
